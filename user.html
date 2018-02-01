@@ -13,25 +13,125 @@
             <h1>Website Design Request</h1>
             <span id="head-instruction">Fill out the form to request a design</span>
         </div>
-        <div id="body">
-            <div class="block">
-                <div class="left">    
-                    <label for="surv">Name</label>
-                </div>
-                <div class="right">
-                    <div class="input-grid">
-                        <div class="input-half">
-                            <input type="text" id="surv">
-                            <label for="surv">First Name</label>
+        <form action="main.js" id="business">    
+            <div id="body">
+                <div class="block">
+                    <div class="left">    
+                        <span>Name</span>
+                    </div>
+                    <div class="right">
+                        <div class="input half">
+                            <input type="text" id="name">
+                            <label for="name" class="labels">First Name</label>
                         </div>
-                        <div class="input-half">
-                            <input type="text" id="surv">
-                            <label for="surv">Last Name</label>
+                        <div class="input half">
+                            <input type="text" id="surname">
+                            <label for="surname" class="labels">Last Name</label>
+                        </div>    
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left">
+                        <span>E-mail</span>
+                    </div>
+                    <div class="right">
+                        <div class="input">    
+                            <input type="text" id="email" placeholder="examp@ex.dom">
+                            <label for="email" class="labels">example@ex.domain</label>
                         </div>
                     </div>
                 </div>
-            </div>    
-        </div>
+                <div class="block">
+                    <div class="left">
+                        <span>Phone Number</span>
+                    </div>
+                    <div class="right short">
+                        <div class="input area-code">
+                            <input type="number" id="code">
+                            <label for="code" class="labels">Area code</label>
+                        </div>
+                        <div class="input tiree text-center">
+                                <span>-</span>
+                        </div>
+                        <div class="input ph-number">
+                            <input type="number" id="num">
+                            <label for="code" class="labels"> Phone number</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left">
+                        <span>Company</span>
+                    </div>
+                    <div class="right short">
+                        <div class="input">
+                            <input type="text" id="company">
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left">
+                        <span>Type of business</span>
+                    </div>
+                    <div class="right short">
+                        <div class="input">
+                            <select name="businessType" id="business-type" >
+                                <option value="Ltd." class="selects">Ltd.</option>
+                                <option value="Corp." class="selects">Corp.</option>
+                                <option value="Co." class="selects">Co.</option>
+                                <option value="P.E." class="selects" selected>P.E.</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left">
+                        <span>Type of website</span>
+                    </div> 
+                    <div class="right short">
+                        <div class="input">
+                            <select name="websiteType" id="website-type">
+                                <option value="single" selected class="selects">Single Page</option>
+                                <option value="multipage" class="selects">Multipage Site</option>
+                                <option value="webservice" class="selects">WebService</option>
+                                <option value="webapp" class="selects">Web Application</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left">
+                        <span>Choose Items for Navigation Bar</span>
+                    </div>
+                    <div class="right short">
+                        <div class="input checkb">
+                            <input type="checkbox" id="checkb-about">
+                            <label for="checkb-about" class="labels">About</label>
+                        </div>
+                        <div class="input checkb">
+                            <input type="checkbox" id="checkb-faq">
+                            <label for="checkb-faq" class="labels">FAQ</label>
+                        </div>
+                        <div class="input checkb">
+                            <input type="checkbox" id="checkb-userguide">
+                            <label for="checkb-userguide" class="labels">User Guide</label>
+                        </div>
+                        <div class="input checkb">
+                            <input type="checkbox" id="checkb-forum">
+                            <label for="checkb-forum" class="labels">Forum</label>
+                        </div>
+                        <div class="input checkb">
+                            <input type="checkbox" id="checkb-blog">
+                            <label for="checkb-blog" class="labels">Blog</label>
+                        </div>
+                        <div class="input checkb">
+                            <input type="checkbox" id="checkb-pricing">
+                            <label for="checkb-pricing" class="labels">Pricing</label>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </form>
     </div>
 </body>
 </html>
