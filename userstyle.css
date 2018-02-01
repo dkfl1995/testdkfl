@@ -37,19 +37,17 @@ html, body{
 
 .input-half{
     width: 50%;
-    display: block;
     float: left;
+    padding: 0 3% 0 0;
 }
 
-.input-half label, .input-half input{
-    max-width: 100%;
+.input-half *{
+    width: 100%;
     font-weight: 500;
 
 }
 
-#surv{
-    margin: 0 1% 0;
-}
+
 
 #head-instruction{
     font-size: 1.2em;
