@@ -42,7 +42,6 @@ header, section{
 @media screen and (max-width: 480px){
     table{
         font-size: 10px;
-        text-align: center;
         box-sizing: border-box
     }
 
@@ -57,6 +56,11 @@ table{
     word-break: break-all;
     color: rgba(0,0,0,.9);
     line-height: 1.5em;
+    
+}
+
+tr>td:not(:first-child){
+    text-align: center;
 }
 
 #textarea-improve, td{
