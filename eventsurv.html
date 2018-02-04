@@ -28,67 +28,77 @@
             <section id="satisfaction">
                 <h3>Overall satisfaction</h3>
                 <div class="block">
-                    <table border="1" id="tab" align="right">
+                    <table id="tab">
                         <tr>
                             <td class="tcell-null"></td>
-                            <td>Very satisfied</td>
-                            <td>Satisfied</td>
-                            <td>Neutral</td>
-                            <td>Unsatisfied</td>
-                            <td>Very unsatisfied</td>
+                            <td class="tcell-chap">Very satisfied</td>
+                            <td class="tcell-chap">Satisfied</td>
+                            <td class="tcell-chap">Neutral</td>
+                            <td class="tcell-chap">Unsatisfied</td>
+                            <td class="tcell-chap">Very unsatisfied</td>
                         </tr>
                         <tr>
-                            <td>Location</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="tcell-chap">Location</td>
+                            <td><input type="radio" name="locationPoint" value="5"></td>
+                            <td><input type="radio" name="locationPoint" value="4"></td>
+                            <td><input type="radio" name="locationPoint" value="3"></td>
+                            <td><input type="radio" name="locationPoint" value="2"></td>
+                            <td><input type="radio" name="locationPoint" value="1"></td>
                         </tr>
                         <tr>
-                            <td>Content</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="tcell-chap">Content</td>
+                            <td><input type="radio" name="contentPoint" value="5"></td>
+                            <td><input type="radio" name="contentPoint" value="4"></td>
+                            <td><input type="radio" name="contentPoint" value="3"></td>
+                            <td><input type="radio" name="contentPoint" value="2"></td>
+                            <td><input type="radio" name="contentPoint" value="1"></td>
                         </tr>
                         <tr>
-                            <td>Price</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="tcell-chap">Price</td>
+                            <td><input type="radio" name="pricePoint" value="5"></td>
+                            <td><input type="radio" name="pricePoint" value="4"></td>
+                            <td><input type="radio" name="pricePoint" value="3"></td>
+                            <td><input type="radio" name="pricePoint" value="2"></td>
+                            <td><input type="radio" name="pricePoint" value="1"></td>
                         </tr>
                         <tr>
-                            <td>Speakers</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="tcell-chap">Speakers</td>
+                            <td><input type="radio" name="speakPoint" value="5"></td>
+                            <td><input type="radio" name="speakPoint" value="4"></td>
+                            <td><input type="radio" name="speakPoint" value="3"></td>
+                            <td><input type="radio" name="speakPoint" value="2"></td>
+                            <td><input type="radio" name="speakPoint" value="1"></td>
                         </tr>
                         <tr>
-                            <td>Organization</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="tcell-chap">Organization</td>
+                            <td><input type="radio" name="orgPoint" value="5"></td>
+                            <td><input type="radio" name="orgPoint" value="4"></td>
+                            <td><input type="radio" name="orgPoint" value="3"></td>
+                            <td><input type="radio" name="orgPoint" value="2"></td>
+                            <td><input type="radio" name="orgPoint" value="1"></td>
                         </tr>
                         <tr>
-                            <td>Overall satisfaction</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="tcell-chap">Overall satisfaction</td>
+                            <td><input type="radio" name="overallPoint" value="5"></td>
+                            <td><input type="radio" name="overallPoint" value="4"></td>
+                            <td><input type="radio" name="overallPoint" value="3"></td>
+                            <td><input type="radio" name="overallPoint" value="2"></td>
+                            <td><input type="radio" name="overallPoint" value="1"></td>
                         </tr>
                     </table>
                 </div>
             </section>
-                                                        
+            <section id="improve-form">
+                <h3>How can we improve this event?</h3>
+                <div class="block">
+                    <textarea name="whatImprove" id="textarea-improve" cols="40" rows="10" maxlenght="350" placeholder="No more than 350 characters long">
+
+                    </textarea>
+                    <div id="input-subm">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </section>                                        
         </form>
     </main>
 </body>
