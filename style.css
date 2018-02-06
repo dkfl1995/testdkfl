@@ -1,0 +1,172 @@
+@font-face {
+    font-family: nunito;
+    src: url("fonts/nunito-sans/NunitoSans-Regular.ttf");
+    font-family: montserrat;
+    src: url("fonts/Montserrat-Medium.ttf")
+}
+
+/* Buttons: background-color: #99ffff
+   text-light-color: #666666
+   black, white  */
+
+.container > .row, .container-fluid > .row{
+    
+}
+
+.row > *{
+    position: absolute;
+    float: left;
+
+}
+
+.row > .col-1{
+    width: calc(100%/12);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-2{
+    width: calc(100%/6);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-3{
+    width: calc(100%/4);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-4{
+    width: calc(100%/3);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-5{
+    width: calc((100%/12)*5);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-6{
+    width: calc(100%/2);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-7{
+    width: calc(100%/2 + 100%/12);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-8{
+    width: calc(100%/2 + 100%/6);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-9{
+    width: calc(100%/2 + 100%/4);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-10{
+    width: calc(100%/2 + 100%/3);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-11{
+    width: calc(100%/2 + (100%/12)*5);
+    padding: 0 15px;
+    position: relative;
+
+}
+
+.row > .col-12{
+    width: 100%;
+    padding: 0 15px;
+    position: relative;
+
+}
+
+*{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+
+ul{
+    -webkit-margin-before: .1em;
+    -webkit-margin-after: .1em;
+    -webkit-padding-start: 0px;
+}
+
+li{
+    width: calc((100%/7) - 5px);
+    display: inline-block;
+}
+
+html, body{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 479px){
+    .container{
+        width: 90%
+    }
+    .container-fluid{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .container{
+        width: 90%
+    }
+    .container-fluid{
+        width: 100%;
+    }
+}  
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 80%
+    }
+    .container-fluid{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container{
+        width: 80%
+    }
+    .container-fluid{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        width: 75%
+    }
+    .container-fluid{
+        width: 100%;
+    }
+}
