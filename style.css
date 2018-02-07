@@ -137,9 +137,26 @@ html, body{
 
 .uppercase{
     text-transform: uppercase;
+    line-height: 2.5rem;
+    letter-spacing: 0.06em
 }
 
+header{
+    padding: 6vh 0 0 0;
+    font-weight: 600;
+    color: black;
+}
 
+li a, li a:visited, li a:focus{
+    color: black;
+    text-decoration-line: none;
+
+}
+
+li a:hover{
+    text-decoration-line: none;
+    color: #4e4ee8; 
+}
 
 ul{
     -webkit-margin-before: 0px;
@@ -150,11 +167,12 @@ ul{
 li{
     width: auto;
     display: inline-block;
+    margin: 0 0 0 4%;
 }
 
-.row > [class*="col-"]{
-    padding-left: 0;
-    padding-right: 0;
+.row [class*="col-"]{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* @media screen and (max-width: 479px){
