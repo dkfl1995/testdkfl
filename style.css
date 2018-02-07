@@ -1,9 +1,3 @@
-@font-face {
-    font-family: nunito;
-    src: url("fonts/nunito-sans/NunitoSans-Regular.ttf");
-    font-family: montserrat;
-    src: url("fonts/Montserrat-Medium.ttf")
-}
 
 /* Buttons: background-color: #99ffff
    text-light-color: #666666
@@ -103,27 +97,64 @@
 
 } */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Nunito+Sans&subset=cyrillic,cyrillic-ext,latin-ext');
+
+/* 
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;  */
+
+
 *{
     box-sizing: border-box;
     overflow-x: hidden;
-}
-
-
-
-ul{
-    -webkit-margin-before: .1em;
-    -webkit-margin-after: .1em;
-    -webkit-padding-start: 0px;
-}
-
-li{
-    width: calc((100%/7) - 5px);
-    display: inline-block;
+    font-size: 12px;
 }
 
 html, body{
     width: 100vw;
     margin: 0 auto;
+    
+    
+}
+
+/*Setting up site text and fonts*/
+
+.text-right{
+    text-align: right;
+}
+
+.nunito{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text{
+    font-size: 1em;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+
+
+ul{
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-padding-start: 0px;
+}
+
+li{
+    width: auto;
+    display: inline-block;
+}
+
+.row > [class*="col-"]{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* @media screen and (max-width: 479px){
