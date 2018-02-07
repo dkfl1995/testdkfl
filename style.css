@@ -9,11 +9,11 @@
    text-light-color: #666666
    black, white  */
 
-.container > .row, .container-fluid > .row{
+/*.container > .row, .container-fluid > .row{
     
-}
+}*/
 
-.row > *{
+/* .row > *{
     position: absolute;
     float: left;
 
@@ -101,7 +101,7 @@
     padding: 0 15px;
     position: relative;
 
-}
+} */
 
 *{
     box-sizing: border-box;
@@ -126,7 +126,7 @@ html, body{
     margin: 0 auto;
 }
 
-@media screen and (max-width: 479px){
+/* @media screen and (max-width: 479px){
     .container{
         width: 90%
     }
@@ -169,4 +169,4 @@ html, body{
     .container-fluid{
         width: 100%;
     }
-}
+} */
