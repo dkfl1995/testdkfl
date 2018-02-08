@@ -40,6 +40,10 @@ html, body{
     text-transform: uppercase;
 }
 
+/* Making styled parts 
+    header and menu - first
+*/
+
 header{
     padding: 6vh 0 0 0;
     font-weight: 600;
@@ -50,6 +54,8 @@ header{
     line-height: 1.4em;
     font-weight: 800;
 }
+
+/* Welcome text for visitors - did below */
 
 .mainface-header{
     padding: 21.33% 0 0 13.5%;
@@ -69,6 +75,8 @@ header{
 .mainface-paragraf a, .mainface-paragraf a:focus, .mainface-paragraf a:hover, .mainface-paragraf a:visited {
     text-decoration-line: none;
 }
+
+/* Little fixes for header and menu bottoms to display it correctly */
 
 a .button{
     display: inline;
@@ -106,6 +114,8 @@ li{
     margin: 0 0 0 4%;
 }
 
+/* styles for About Us block... */
+
 .about{
     text-align: center;
     padding: 21.35% 0 18.5% .75%;
@@ -126,6 +136,8 @@ li{
 #sign{
     line-height: 10rem;
 }
+
+/* Styles for Skills bars */
 
 .skills{
     letter-spacing: .1em;
@@ -150,20 +162,54 @@ li{
 .progress-bar:nth-child(2){
     width: 75%;
     height: 3px;
-    background: #99ffff;
+    background: #6fb4ff;
 }
 
 .progress-bar:nth-child(4){
     width: 90%;
     height: 3px;
-    background: #99ffff;
+    background: #6fb4ff;
 }
 
 .progress-bar:last-child{
     width: 65%;
     height: 3px;
-    background: #99ffff;
+    background: #6fb4ff;
 }
+
+/* Infopanel styles */
+
+
+
+/* Gallery panel styles */
+
+
+
+/* workprocess intro block styles */
+
+
+
+/* Our instruments and Possibilities part block styles */
+
+
+
+/* carousel styles */
+
+
+
+/* our clients styles */
+
+
+
+/* Contact form styles */
+
+
+
+/* footer styles */
+
+
+
+/* overall fixes */
 
 .row [class*="col-"]{
     padding-left: 0px;
