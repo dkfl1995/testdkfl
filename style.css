@@ -14,8 +14,11 @@
 html, body{
     width: 100vw;
     margin: 0 auto;
-    
-    
+}
+
+.bg-main{
+    width: 100%;
+    background: #e9e9e9;
 }
 
 /*Setting up site text and fonts*/
@@ -57,8 +60,8 @@ header{
 
 /* Welcome text for visitors - did below */
 
-.mainface-header{
-    padding: 21.33% 0 0 13.5%;
+.mainface{
+    padding: 21.325% 0 30% 13.5%;
     letter-spacing: .065rem
 }
 
@@ -118,11 +121,11 @@ li{
 
 .about{
     text-align: center;
-    padding: 21.35% 0 18.5% .75%;
+    padding: 6.375% 0 18.5% .75%;
 }
 
 .row h2{
-    font-weight: 600;
+    font-weight: 500;
     line-height: 3.75rem;
 }
 
@@ -138,6 +141,40 @@ li{
 }
 
 /* Styles for Skills bars */
+
+.bg-skill{
+    width: 100%;
+    min-height:10%;
+    position: relative;
+    z-index: 100;
+}
+
+.bg-skill > .container{
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.box-1{
+    background-color: #f8f9f9;
+    position: relative;
+    float: left;
+    z-index: 1
+}
+
+.box-2{
+    background-color: #e9e9e9;
+    position: relative;
+    float: left;
+    z-index: 1;
+}
+
+.box-1, .box-2{
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+}
 
 .skills{
     letter-spacing: .1em;
