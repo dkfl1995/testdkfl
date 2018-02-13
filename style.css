@@ -9,11 +9,13 @@
     box-sizing: border-box;
     overflow-x: hidden;
     font-size: 12px;
+    
 }
 
 html, body{
     width: 100vw;
     margin: 0 auto;
+    
 }
 
 .bg-main{
@@ -56,6 +58,7 @@ header{
 .row h1{
     line-height: 1.4em;
     font-weight: 800;
+    color: black
 }
 
 /* Welcome text for visitors - did below */
@@ -119,19 +122,20 @@ li{
 
 /* styles for About Us block... */
 
-.about{
+.workprocess, .about{
     text-align: center;
     padding: 6.375% 0 6.875% .75%;
 }
 
 .row h2{
-    font-weight: 500;
+    font-weight: 600;
     line-height: 3.75rem;
+    color: black
 }
 
-.about p{
-    font-size: 1.25em;
-    letter-spacing: .0375em;
+.instrument > .nunito,.workprocess p, .about p{
+    font-size: 1.5rem;
+    letter-spacing: .06rem;
     line-height: 2.4rem;
     padding: 1.5% 22% 0 22%;
 }
@@ -146,7 +150,7 @@ li{
     width: 100%;
     min-height:10%;
     background-image: linear-gradient(to left, #e9e9e9 50%, #f8f9f9 50%);
-    padding: 0 0 11.25% 0;
+    padding: 0 0 11% 0;
 }
 
 .bg-skill > .container, .bg-infopanel > .container{
@@ -180,7 +184,7 @@ li{
 
 
 .skills{
-    letter-spacing: .1em;
+    letter-spacing: .1rem;
     margin: 0 0 -.375%;
     padding: 11.5% 0 0 0;
 }
@@ -188,7 +192,7 @@ li{
 .skills-progress{
     clear: left;
     font-weight: 800;
-    letter-spacing: .08rem;
+    letter-spacing: .1rem;
     padding: 4% 0 3% 0;
 }
 
@@ -196,30 +200,26 @@ li{
     padding: 0 1.25rem 0;
 }
 
-.progress-bar{
-    margin: 0 0 2.5% 0; 
-}
-
 .progress-bar-bg{
     width: 90%;
     background-color: rgba(128, 128, 128, .3);
     height: 3px;
-    margin: 0 0 2% 0;
+    margin: 0 0 2.125% 0;
 }
 
-.progress-bar-bg:nth-child(2)  .progress-bar{
+.progress-bar-bg:nth-child(2)  .progress-bars{
     width: 75%;
     height: 3px;
     background: #6fb4ff;
 }
 
-.progress-bar-bg:nth-child(4)  .progress-bar{
+.progress-bar-bg:nth-child(4)  .progress-bars{
     width: 90%;
     height: 3px;
     background: #6fb4ff;
 }
 
-.progress-bar-bg:nth-child(6)  .progress-bar{
+.progress-bar-bg:nth-child(6)  .progress-bars{
     width: 65%;
     height: 3px;
     background: #6fb4ff;
@@ -236,16 +236,22 @@ li{
     color: white;
     letter-spacing: .1rem;
     width: 100%;
-    display: block;
-}
-
-.infopanel-item > *{
-    clear: both;
-    display: inline-block;
+    display: flex;
+    padding: 34% 0 34% 0;
 }
 
 .infopanel-item p{
     margin: 0;
+}
+
+.infopanel-item  > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.infopanel-item > :first-child{
+    padding: 0 10% 0 1%;
 }
 
 .infopanel-item p:first-of-type{
@@ -254,19 +260,99 @@ li{
 
 /* Gallery panel styles */
 
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
 
+.gallery-item{
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item > img{
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery-item:hover{
+    background: url('/icons/gallery-preload-eye-icon.png') no-repeat center;
+    background-color:rgba(0, 0, 0, .4) ;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.load{
+    padding: 3% 0;
+    letter-spacing: .1rem;
+    width: 100%;
+    background-color: #f5f5f5;
+}
 
 /* workprocess intro block styles */
 
+.workprocess p{
+    padding: 1.5% 27%;
+}
 
+.video-wrap{
+    position: relative;
+    height: 0;
+    padding-bottom: 45%;
+}
+
+.video-wrap iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 
 /* Our instruments and Possibilities part block styles */
 
+.kit{
+    background-color: #f5f5f5;
+    margin: 6% 0 0 0;
+    padding: 4% 0 6.5% 0;
+}
 
+.instrument{
+    display: flex;
+    flex-direction: column;
+    padding: 4.5% 0 0 0;
+}
+
+.instrument > .nunito{
+    padding: 0 5%;
+    color: #787878
+}
+
+.instrument > p:nth-child(2){
+    margin-top: 5.5%;
+    letter-spacing: .075rem
+}
+
+.instrument > *{
+    margin: 0 auto;
+
+}
 
 /* carousel styles */
 
-
+.carousel-inner > .item > *{
+    background-color: #10c9c3;
+    height: 80%;
+    width: 100%;
+}
 
 /* our clients styles */
 
