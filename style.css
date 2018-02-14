@@ -435,13 +435,13 @@ ol.carousel-indicators li.active{
 }
 
 form{
-    padding: 0 7%;
-    display: inline-block;
+    padding: 1% 7% 2% 7%;
+    display: block;
 }
 
 form > .form-block{
     width: 100%;
-    margin: 2.25% 0;
+    margin: 2% 0;
     -webkit-display: inline-flex;
     -moz-display: inline-flex;
     -ms-display: inline-flex;
@@ -458,13 +458,13 @@ form > .form-block{
     width: 50%;
 }
 
-.half:first-child > input{
-    margin: 0 5% 0 0;
+.half:first-child{
+    margin: 0 2% 0 0;
 
 }
 
-.half:last-child > input{
-    margin: 0 0 0 5%;
+.half:last-child{
+    margin: 0 0 0 2%;
 }
 
 input, textarea{
@@ -473,13 +473,9 @@ input, textarea{
     
 }
 
-input, .half input, textarea{
-    padding: 2.75% 10px;
+input, .half, textarea{
+    padding: 2.75%;
 }
-
-/* .form-block > .half > input{
-    padding: 5.5%;
-} */
 
 input::placeholder, #message::placeholder{
     opacity: 0.9;
@@ -493,9 +489,10 @@ input::placeholder, #message::placeholder{
 }
 
 input[type="submit"]{
-    display: inline-block;
-    margin: 3% auto;
-    padding: 3%;
+    display: block;
+    margin: 1% auto;
+    padding: 2.75% 5%;
+    width: 27%;
     background-color: #10c9c3;
     color: #fff;
     letter-spacing: .1rem
