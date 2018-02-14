@@ -435,27 +435,55 @@ ol.carousel-indicators li.active{
 }
 
 form{
-    padding: 0 4% 0 4%;
+    padding: 0 7%;
+    display: inline-block;
 }
 
 form > .form-block{
     width: 100%;
-    padding: 2% 0;
-    display: inline-block;
+    margin: 2.25% 0;
+    -webkit-display: inline-flex;
+    -moz-display: inline-flex;
+    -ms-display: inline-flex;
+    -o-display: inline-flex;
+    display: inline-flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
 }
 
-input, #message, #message::placeholder{
+.form-block > .half{
+    width: 50%;
+}
+
+.half:first-child > input{
+    margin: 0 5% 0 0;
+
+}
+
+.half:last-child > input{
+    margin: 0 0 0 5%;
+}
+
+input, textarea{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.5rem;
-    padding: 2% 10px;
+    
 }
 
-#message::placeholder{
-    padding: 0 10px;
+input, .half input, textarea{
+    padding: 2.75% 10px;
 }
+
+/* .form-block > .half > input{
+    padding: 5.5%;
+} */
 
 input::placeholder, #message::placeholder{
-    opacity: 0.9
+    opacity: 0.9;
+    font-size: 1.5rem
 }
 
 #message, input{
@@ -464,9 +492,13 @@ input::placeholder, #message::placeholder{
     width: 100%;
 }
 
-input.half{
-    float: left;
-    width: 50%;
+input[type="submit"]{
+    display: inline-block;
+    margin: 3% auto;
+    padding: 3%;
+    background-color: #10c9c3;
+    color: #fff;
+    letter-spacing: .1rem
 }
 
 /* footer styles */
