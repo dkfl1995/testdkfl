@@ -510,8 +510,9 @@ footer{
     -ms-display: flex;
     -o-display: flex;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 7.75% 0
 }
 
 .row .block{
@@ -542,7 +543,7 @@ footer{
 }
 
 .block:nth-of-type(3){
-    
+    margin: 0 0 0 50px;
     -webkit-flex-direction: row;
     -moz-flex-direction: row;
     -ms-flex-direction: row;
@@ -551,27 +552,8 @@ footer{
     
 }
 
-.semi-block{
-
-    -webkit-display: inline-flex;
-    -moz-display: inline-flex;
-    -ms-display: inline-flex;
-    -o-display: inline-flex;
-    display: inline-flex; 
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
-    margin: 0% 5%;
-}
-
-.semi-block *{
-    -webkit-display: flex;
-    -moz-display: flex;
-    -ms-display: flex;
-    -o-display: flex;
-    display: flex;
+.semi-block:first-child{
+    padding: 0 60px 0 0;
 }
 
 .block h4{
@@ -600,22 +582,6 @@ footer{
     transition: color .25s ease-out;
     color: #928181;
     text-decoration: none;
-}
-
-.block:first-child{
-    margin: 8% 0 8% 0;
-}
-
-.block:nth-of-type(2){
-    margin: 8% 0 8% 21%;
-}
-
-.block:nth-of-type(3){
-    margin: 8% 0 8% 12.5%;
-}
-
-.block:nth-of-type(4){
-    margin: 8% 0 8% 10%;
 }
 
 /* overall fixes */
