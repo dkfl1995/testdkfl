@@ -578,7 +578,7 @@ footer{
     color: #fff;
 }
 
-.block a:hover{
+.block a:hover, .block a:focus, .block a:visited{
     transition: color .25s ease-out;
     color: #928181;
     text-decoration: none;
