@@ -500,7 +500,123 @@ input[type="submit"]{
 
 /* footer styles */
 
+footer{
+    background-color: #141414;
+}
 
+.footer-box{
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.row .block{
+    color: white;
+    -webkit-display: inline-flex;
+    -moz-display: inline-flex;
+    -ms-display: inline-flex;
+    -o-display: inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;   
+}
+
+.block > *{
+    -webkit-display: inline-flex;
+    -moz-display: inline-flex;
+    -ms-display: inline-flex;
+    -o-display: inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+.block:nth-of-type(3){
+    
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    
+}
+
+.semi-block{
+
+    -webkit-display: inline-flex;
+    -moz-display: inline-flex;
+    -ms-display: inline-flex;
+    -o-display: inline-flex;
+    display: inline-flex; 
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    margin: 0% 5%;
+}
+
+.semi-block *{
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+}
+
+.block h4{
+    width: 100%;
+    line-height: initial;
+    margin: 0 0 10% 0
+}
+
+.block p, .block a{
+    line-height: 2.5rem
+}
+
+
+.block > .nunito, .block + .nunito{
+    font-size: 1.5rem;
+}
+
+.block a{
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    color: #fff;
+}
+
+.block a:hover{
+    transition: color .25s ease-out;
+    color: #928181;
+    text-decoration: none;
+}
+
+.block:first-child{
+    margin: 8% 0 8% 0;
+}
+
+.block:nth-of-type(2){
+    margin: 8% 0 8% 21%;
+}
+
+.block:nth-of-type(3){
+    margin: 8% 0 8% 12.5%;
+}
+
+.block:nth-of-type(4){
+    margin: 8% 0 8% 10%;
+}
 
 /* overall fixes */
 
