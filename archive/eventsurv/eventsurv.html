@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="eventsurv.css">
+</head>
+<body>
+    <header>
+        <h1>Event Satisfaction Survey</h1>
+        <h4>Please take a few moments to complete this survey</h4>
+    </header>
+    <main>
+        <form action="main.js">
+            <section id="before">
+                <h3>Have you attended this event before?</h3>
+                <div class="block">
+                    <input name="been" type="radio" value="1" id="yes">
+                    <label for="yes">Yes</label>
+                </div>
+                <div class="block">
+                    <input name="been" type="radio" value="0" id="no" checked>
+                    <label for="no">No</label>
+                </div>
+            </section>
+            <section id="satisfaction">
+                <h3>Overall satisfaction</h3>
+                <div class="block">
+                    <table id="tab">
+                        <tr>
+                            <td class="tcell-null"></td>
+                            <td class="tcell-chap">Very satisfied</td>
+                            <td class="tcell-chap">Satisfied</td>
+                            <td class="tcell-chap">Neutral</td>
+                            <td class="tcell-chap">Unsatisfied</td>
+                            <td class="tcell-chap">Very unsatisfied</td>
+                        </tr>
+                        <tr>
+                            <td class="tcell-chap">Location</td>
+                            <td><input type="radio" name="locationPoint" value="5"></td>
+                            <td><input type="radio" name="locationPoint" value="4"></td>
+                            <td><input type="radio" name="locationPoint" value="3"></td>
+                            <td><input type="radio" name="locationPoint" value="2"></td>
+                            <td><input type="radio" name="locationPoint" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td class="tcell-chap">Content</td>
+                            <td><input type="radio" name="contentPoint" value="5"></td>
+                            <td><input type="radio" name="contentPoint" value="4"></td>
+                            <td><input type="radio" name="contentPoint" value="3"></td>
+                            <td><input type="radio" name="contentPoint" value="2"></td>
+                            <td><input type="radio" name="contentPoint" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td class="tcell-chap">Price</td>
+                            <td><input type="radio" name="pricePoint" value="5"></td>
+                            <td><input type="radio" name="pricePoint" value="4"></td>
+                            <td><input type="radio" name="pricePoint" value="3"></td>
+                            <td><input type="radio" name="pricePoint" value="2"></td>
+                            <td><input type="radio" name="pricePoint" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td class="tcell-chap">Speakers</td>
+                            <td><input type="radio" name="speakPoint" value="5"></td>
+                            <td><input type="radio" name="speakPoint" value="4"></td>
+                            <td><input type="radio" name="speakPoint" value="3"></td>
+                            <td><input type="radio" name="speakPoint" value="2"></td>
+                            <td><input type="radio" name="speakPoint" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td class="tcell-chap">Organization</td>
+                            <td><input type="radio" name="orgPoint" value="5"></td>
+                            <td><input type="radio" name="orgPoint" value="4"></td>
+                            <td><input type="radio" name="orgPoint" value="3"></td>
+                            <td><input type="radio" name="orgPoint" value="2"></td>
+                            <td><input type="radio" name="orgPoint" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td class="tcell-chap">Overall satisfaction</td>
+                            <td><input type="radio" name="overallPoint" value="5"></td>
+                            <td><input type="radio" name="overallPoint" value="4"></td>
+                            <td><input type="radio" name="overallPoint" value="3"></td>
+                            <td><input type="radio" name="overallPoint" value="2"></td>
+                            <td><input type="radio" name="overallPoint" value="1"></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section id="improve-form">
+                <h3>How can we improve this event?</h3>
+                <div class="block">
+                    <textarea name="whatImprove" id="textarea-improve" cols="40" rows="10" maxlenght="350" placeholder="No more than 350 characters long">
+
+                    </textarea>
+                    <div id="input-subm">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </section>                                        
+        </form>
+    </main>
+</body>
+</html>
