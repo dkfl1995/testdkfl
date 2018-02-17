@@ -5,3 +5,17 @@
 @import "layout/header.scss";
 @import "layout/footer.scss";
 @import "page/home.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900');
+$lato: 'Lato', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700');
+$sourcesans: 'Source Sans Pro', sans-serif; 
+
+.lato{
+    font-family: $lato;
+}
+
+.sourcesans{
+    font-family: $sourcesans
+}
+
