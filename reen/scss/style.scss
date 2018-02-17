@@ -4,18 +4,84 @@
 @import "base/mixins.scss";
 @import "layout/header.scss";
 @import "layout/footer.scss";
-@import "page/home.scss";
+@import "page/home.scss"; 
+ 
+body{
+    background-color: $bg;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Lato:700,900');
-$lato: 'Lato', sans-serif;
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700');
-$sourcesans: 'Source Sans Pro', sans-serif; 
+.container{
+    @include make-container();
+}
 
 .lato{
     font-family: $lato;
 }
 
 .sourcesans{
-    font-family: $sourcesans
+    font-family: $sourcesans;
+
 }
+
+.text-deco-none{
+    text-decoration-style: none;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.top-head{
+    background-color: $thcol;
+}
+
+.top-head, header{
+    border-bottom: 1px solid #acacac;
+    @extend .sourcesans;
+    font-weight: 800;
+    
+}
+
+header{
+    font-size: 1.25rem;
+    @extend .uppercase;
+}
+
+nav, .top-head{
+    @extend .text-deco-none;
+    a{
+        text-decoration: inherit
+    }
+    
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact, .social-network{
+    display: flex;
+    width: 50%;
+    & *{
+        display: inline-flex;
+    }
+}
+
+.contact{
+    justify-content: flex-start;
+    a{
+        display: inline-flex;
+        img{
+            
+        }
+    }
+}
+
+.social-network{
+    justify-content: flex-end;
+}
+
+
+
 

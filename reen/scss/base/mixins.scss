@@ -1,0 +1,13 @@
+@mixin make-container(){
+    margin: 0 auto;
+    @media screen and (min-width: $scr-lg){
+        width: (1140px + $gutter);
+        padding-left: ($gutter / 2);
+        padding-right: ($gutter / 2);
+    }
+    @media screen and (max-width: ($scr-lg - 1)){
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
