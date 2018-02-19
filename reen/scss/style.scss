@@ -5,7 +5,11 @@
 @import "layout/header.scss";
 @import "layout/footer.scss";
 @import "page/home.scss"; 
- 
+
+*{
+    box-sizing: border-box
+}
+
 body{
     background-color: $bg;
 }
@@ -24,7 +28,7 @@ body{
 }
 
 .text-deco-none{
-    text-decoration-style: none;
+    text-decoration: none;
 }
 
 .uppercase{
@@ -33,10 +37,11 @@ body{
 
 .top-head{
     background-color: $thcol;
+    height: 8vh;
 }
 
 .top-head, header{
-    border-bottom: 1px solid #acacac;
+    border-bottom: 1px solid #e6e9ed;
     @extend .sourcesans;
     font-weight: 800;
     
@@ -44,44 +49,245 @@ body{
 
 header{
     font-size: 1.25rem;
+    height: 16vh;
     @extend .uppercase;
 }
 
-nav, .top-head{
+.container .contact, .container .header-box{
     @extend .text-deco-none;
-    a{
-        text-decoration: inherit
+    & a{
+        text-decoration-line: inherit;
+        color: $textmaincol
     }
-    
 }
 
 .container{
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 
 .contact, .social-network{
     display: flex;
     width: 50%;
-    & *{
-        display: inline-flex;
-    }
+}
+
+.centeredY{
+    align-self: center;
+    display: flex;
 }
 
 .contact{
     justify-content: flex-start;
     a{
-        display: inline-flex;
+        @extend .centeredY;
+        padding: 0 5% 0 0;
         img{
-            
+            @extend .centeredY;
+            padding: 0 5% 0 0;            
         }
     }
 }
 
 .social-network{
-    justify-content: flex-end;
+    
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        li{
+            display: flex;
+            align-self: stretch;
+            padding: 0 2%;
+            a{
+                @extend .centeredY;
+                width: 100%;
+                img{
+                    @extend .centeredY;
+                }
+            }
+        }    
+    }
 }
 
+header{
+    .container{
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        .header-box{
+            width: 100%;
+            display: flex;
+            align-self: center;
+            justify-content: space-between;
+            & > *{
+                width: auto;
+            }
+            nav{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                a{
+                    display: flex;
+                    align-self: stretch;
+                    align-items: center;
+                    padding: 0 3%;
+                }
+            }
+            .search{
+                display: flex;
+                align-self: stretch;
+                & img{
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
 
+.carousel ol{
+    background-color: white;
+    border-radius: .2rem;
+    width: auto;
+    transform: translate(-50%,-50%);
+    padding: 4px;
+    margin: 0;
+    bottom: -30px;
+    display: inline-flex;
+    justify-content: center;
+    li{
+        background-color: $textmaincol;
+        display: flex;
+        align-self: center;
+        margin: 4px;
+        width: 16px;
+        height: 16px;
+        &.active{
+            background-color: $btncol;
+            margin: 4px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
 
+.carousel-inner{
+    width: 100%;
+    height: 100vh;
+    .item{
+        width: 100%;
+        height: 100%;
+        display: flex !important;
+        flex-wrap: wrap;
+        align-content: center !important;
+        justify-content: center;
+        .text-head{
+            font-size: 6rem !important;
+            color: white;
+            @extend .lato;
+            @extend .uppercase;
+            width: 80%;
+            text-align: center;
+            
+        }
+        p{
+            font-size: 2rem !important;
+            color: $textseccol;
+            @extend .sourcesans;
+            width: 80%;
+            text-align: center;
+        }
+        .btn{
+            width: 80%;
+            a{
+                background-color: $btncol;
+                color: white;
+                @extend .sourcesans;
+                @extend .uppercase;
+                @extend .text-deco-none;
+                font-size: 1.5rem;
+            }    
+        }
+        &:first-child{
+            background-image: url('/img/image-carousel-big-1.png');
+            background-position: center;
+            background-size: 100% 100%;
+        }
+        &:nth-child(2){
+            background-image: url('/img/image-carousel-big-2.png');
+            background-position: center;
+            background-size: cover;
+        }
+        &:nth-child(3){
+            background-image: url('/img/image-carousel-big-3.png');
+            background-position: center;
+            background-size: cover;
+        }
+        &:nth-child(4){
+            background-image: url('/img/image-carousel-big-4.png');
+            background-position: center;
+            background-size: cover;
+        }
+        &:nth-child(5){
+            background-image: url('/img/image-carousel-big-5.png');
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
 
+.carousel-control{
+    width: 40px !important;
+    height: 40px !important;
+    background-image: none !important;
+    opacity: .25 !important;
+    background-color: $textmaincol !important;
+    position: absolute;
+    top: 50% !important;
+    padding: 0 !important;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    .left, .right{
+        margin: auto;
+        position: absolute;
+    }
+    &.left{
+        left: 5% !important;
+    }
+    &.right{
+        right: 5% !important;
+    }
+    #left-mark, #right-mark{
+        
+        display: block;
+        margin: auto;    
+        .line:first-child{
+            display: flex;
+            background-color: white;
+            border-radius: 2px;
+            height: 5px;
+            width: 20px;
+            margin: 6px 0;
+            transform: rotate(-45deg);
+        }
+        .line:last-child{
+            display: flex;
+            background-color: white;
+            border-radius: 2px;
+            height: 5px;
+            width: 20px;
+            margin: 6px 0;
+            transform: rotate(45deg);
+        }
+    }
+    #right-mark{    
+        .line:first-child{
+            transform: rotate(45deg);
+        }
+        .line:last-child{
+            transform: rotate(-45deg);
+        }
+    }
+}

@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/fontawesome-all.min.css">
-	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="top-head">
@@ -24,35 +25,82 @@
 			</div>
 			<div class="social-network">
 				<ul>
-					<li>
-						<a href="">
-							<img src="img/icon-facebook.png" alt="">
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/icon-google.png" alt="">
-						</a>	
-					</li>
+					<li><a href=""><img src="img/icon-facebook.png" alt=""></a></li>
+					<li><a href=""><img src="img/icon-google.png" alt=""></a></li>
+					<li><a href=""><img src="/img/icon-twitter.png" alt=""></a></li>
+					<li><a href=""><img src="/img/icon-pinterest.png" alt=""></a></li>
+					<li><a href=""><img src="/img/icon-behance.png" alt=""></a></li>
+					<li><a href=""><img src="/img/icon-dribbble.png" alt=""></a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<header>
-		<div class="container">	
-			<a href="" class="logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			<nav>
-				<a href="">Home</a>
-				<a href="">Portfolio</a>
-				<a href="">Blog</a>
-				<a href="">Pages</a>
-				<a href="">Features</a>
-				<a href="">Features</a>
-				<a href="">Contact</a>
-			</nav>
+		<div class="container">
+			<div class="header-box">	
+				<a href="" class="logo">
+					<img src="img/logo.png" alt="">
+				</a>
+				<nav>
+					<a href="">Home</a>
+					<a href="">Portfolio</a>
+					<a href="">Blog</a>
+					<a href="">Pages</a>
+					<a href="">Features</a>
+					<a href="">Features</a>
+					<a href="">Contact</a>
+				</nav>
+				<div class="search">
+					<img src="img/icon-find.png" alt="">
+				</div>
+			</div>	
 		</div>
 	</header>
+	<main>
+		<div class="hero">
+			<div id="main-carousel" class="carousel slide" data-ride="carousel">
+				<!-- indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#main-carousel" data-slide-to="1"></li>
+					<li data-target="#main-carousel" data-slide-to="2"></li>
+					<li data-target="#main-carousel" data-slide-to="3"></li>
+					<li data-target="#main-carousel" data-slide-to="4"></li>
+				</ol>
+				<!-- items of carousel -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="text-head">
+							Made for Designers
+						</div>
+						<p>
+							Create your online portfolio in minutes with the professionally and lovingly designed REEN website template. 
+							Customize your site with versatile and easy to use features.
+						</p>
+						<div class=""><a href="">Get Started Now</a></div>
+					</div>
+					<div class="item">
+						
+					</div>
+					<div class="item">
+
+					</div>
+					<div class="item">
+
+					</div>
+					<div class="item">
+
+					</div>
+				</div>
+				<!-- carousel controls -->
+				<a href="#main-carousel" class="left carousel-control" data-slide="prev">
+					<div id="left-mark"><div class="line"></div><div class="line"></div></div>
+				</a>
+				<a href="#main-carousel" class="right carousel-control" data-slide="next">
+					<div id="right-mark"><div class="line"></div><div class="line"></div></div>
+				</a>
+			</div>
+		</div>
+	</main>
 </body>
 </html>
