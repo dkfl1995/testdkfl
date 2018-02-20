@@ -31,6 +31,10 @@ body{
     text-decoration: none;
 }
 
+.align-right{
+    text-align: right;
+}
+
 .uppercase{
     text-transform: uppercase;
 }
@@ -82,6 +86,7 @@ header{
     a{
         @extend .centeredY;
         padding: 0 5% 0 0;
+        margin: 0 5% 0 0;
         img{
             @extend .centeredY;
             padding: 0 5% 0 0;            
@@ -178,46 +183,61 @@ header{
     .item{
         width: 100%;
         height: 100%;
-        display: flex !important;
-        flex-wrap: wrap;
-        align-content: center !important;
-        justify-content: center;
-        .text-head{
-            font-size: 6rem !important;
-            color: white;
-            @extend .lato;
-            @extend .uppercase;
+        .item-flex{
+            margin: auto;
             width: 80%;
-            text-align: center;
-            
-        }
-        p{
-            font-size: 2rem !important;
-            color: $textseccol;
-            @extend .sourcesans;
-            width: 80%;
-            text-align: center;
-        }
-        .btn{
-            width: 80%;
-            a{
-                background-color: $btncol;
+            height: 100%;
+            display: flex !important;
+            flex-wrap: wrap;
+            align-content: center !important;
+            justify-content: center;
+            .text-head{
+                font-size: 4rem !important;
                 color: white;
-                @extend .sourcesans;
+                @extend .lato;
                 @extend .uppercase;
-                @extend .text-deco-none;
-                font-size: 1.5rem;
-            }    
+                width: 100%;
+                
+            }
+            p{
+                font-size: 1.5rem !important;
+                color: $textseccol;
+                @extend .sourcesans;
+                width: 100%;
+                text-align: center;
+            }
+            .btn{
+                background-color: $btnbgcol;
+                padding: 1.25% 3.75%;
+                margin-top: 4%;
+                border-radius: 2px;
+                a{
+                    color: white;
+                    @extend .sourcesans;
+                    @extend .uppercase;
+                    @extend .text-deco-none;
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                }    
+            }
         }
         &:first-child{
             background-image: url('/img/image-carousel-big-1.png');
             background-position: center;
             background-size: 100% 100%;
+            .item-flex{
+                .text-head{
+                    text-align: center
+                }
+            }
         }
         &:nth-child(2){
             background-image: url('/img/image-carousel-big-2.png');
             background-position: center;
             background-size: cover;
+            .text-head{
+                @extend .align-right;
+            }
         }
         &:nth-child(3){
             background-image: url('/img/image-carousel-big-3.png');
@@ -251,7 +271,7 @@ header{
     justify-content: center;
     .left, .right{
         margin: auto;
-        position: absolute;
+        
     }
     &.left{
         left: 5% !important;
