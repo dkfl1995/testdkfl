@@ -241,22 +241,26 @@ header{
             //         font-weight: 800;   
             //     }
             // }
-            .btn{
+            a:link, a:hover, a:visited, a:active{
+                @extend .text-deco-none;
                 background-color: $btnbgcol;
                 border-radius: 2px;
                 text-align: center;
                 color: white;
                 @extend .sourcesans;
                 @extend .uppercase;
-                font-size: 1em !important;
+                font-size: 1rem !important;
                 font-weight: 800;
                 margin-top: 4%;
                 padding: 1.25% 4%;
-                a, a:link, a:hover, a:visited, a:active{
-                    box-sizing: border-box;
-                    width: 100%;
-                    
-                }
+                box-sizing: border-box;
+                min-width: 20% !important;
+            }
+            a::before{
+                content: '';
+                min-width: 100%;
+                white-space: nowrap !important;
+                overflow-wrap: 100;
             }
         }
         &:first-child{
