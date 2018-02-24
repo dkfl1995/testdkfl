@@ -182,14 +182,14 @@ header{
         background-color: $textmaincol;
         display: flex;
         align-self: center;
-        margin: 4px;
-        width: 16px;
-        height: 16px;
+        margin: 3px;
+        width: 12px;
+        height: 12px;
         &.active{
             background-color: $btncol;
-            margin: 4px;
-            width: 16px;
-            height: 16px;
+            margin: 3px;
+            width: 12px;
+            height: 12px;
         }
     }
 }
@@ -206,42 +206,21 @@ header{
             height: 100%;
             display: flex !important;
             flex-wrap: wrap;
-            align-content: center !important;
-            justify-content: center;
             .text-head{
                 font-size: 4rem !important;
                 color: white;
                 @extend .lato;
                 @extend .uppercase;
-                width: 100%;
-                
+                font-weight: 800;
+                line-height: 5rem;
             }
             p{
                 font-size: 1.5rem !important;
-                color: $textseccol;
+                color: white;
                 @extend .sourcesans;
-                width: 100%;
-                text-align: center;
+                width: 70%;
             }
-            // a, a:link, a:hover, a:visited, a:active{
-            //     white-space: nowrap;
-            //     box-sizing: border-box !important;
-            //     @extend .text-deco-none;
-            //     margin-top: 4%;
-            //     background-color: $btnbgcol;
-            //     padding: 1.25% 4%;
-            //     .btn{
-            //         width: 100%;
-            //         border-radius: 2px;                 
-            //         text-align: center;
-            //         color: white;
-            //         @extend .sourcesans;
-            //         @extend .uppercase;
-            //         font-size: 1em !important;
-            //         font-weight: 800;   
-            //     }
-            // }
-            a:link, a:hover, a:visited, a:active{
+            a:link, a:hover, a:visited, a:active, a::before{
                 @extend .text-deco-none;
                 background-color: $btnbgcol;
                 border-radius: 2px;
@@ -251,16 +230,8 @@ header{
                 @extend .uppercase;
                 font-size: 1rem !important;
                 font-weight: 800;
-                margin-top: 4%;
-                padding: 1.25% 4%;
-                box-sizing: border-box;
+                padding: 1.75% 0;
                 min-width: 20% !important;
-            }
-            a::before{
-                content: '';
-                min-width: 100%;
-                white-space: nowrap !important;
-                overflow-wrap: 100;
             }
         }
         &:first-child{
@@ -268,8 +239,16 @@ header{
             background-position: center;
             background-size: 100% 100%;
             .item-flex{
-                .text-head{
+                align-content: center;
+                justify-content: center;
+                .text-head, p, a{
                     text-align: center;
+                }
+                p{
+                    color: $textseccol;
+                }
+                a{
+                    margin: 4% 20%;
                 }
             }
         }
@@ -277,24 +256,100 @@ header{
             background-image: url('/img/image-carousel-big-2.png');
             background-position: center;
             background-size: cover;
-            .text-head{
-                @extend .align-right;
+            .item-flex{
+                align-content: center;
+                justify-content: flex-end;
+                .text-head, p{
+                    @extend .align-right;
+                }
+                a{
+                    margin: 4% 0 4% 50%;
+                }
             }
         }
         &:nth-child(3){
             background-image: url('/img/image-carousel-big-3.png');
             background-position: center;
             background-size: cover;
+            .item-flex{
+                display: flex;
+                align-content: center;
+                justify-content: flex-start;
+                .text-head{
+                    background-color: $textmaincol;
+                    height: fit-content;
+                    width: fit-content;
+                    margin: .5% 30% 0 0;
+                    padding: 0 2rem;
+                }
+                p{
+                    color: $textmaincol;
+                    width: 60%;
+                    margin-top: 2%
+                }
+                a{
+                    margin: 4% 50% 4% 0;
+                }
+            }
         }
         &:nth-child(4){
             background-image: url('/img/image-carousel-big-4.png');
             background-position: center;
             background-size: cover;
+            .item-flex{
+                display: flex;
+                align-content: flex-start;
+                justify-content: flex-end;
+                .text-head{
+                    background-color: $textmaincol;
+                    height: fit-content;
+                    width: fit-content;
+                    padding: 0 2rem;
+                    &:first-child{
+                        margin: 10% 0 .5% 30%;
+                    }
+                    &:nth-child(2){
+                        margin: 0 0 2% 30%;
+                    }
+                }
+                p{
+                    width: 60%;
+                    color: white;
+                    @extend .align-right;
+                }
+                a{
+                    margin: 4% 0 4% 50%;
+                }
+            }
+            
         }
         &:nth-child(5){
             background-image: url('/img/image-carousel-big-5.png');
             background-position: center;
             background-size: cover;
+            .item-flex{
+                display: flex;
+                align-content: flex-start;
+                justify-content: center;
+                .text-head{
+                    width: fit-content;
+                    padding: 0 2em;
+                    &:first-child{
+                        margin: 5% 5% 0 5%;
+                    }
+                    &:last-child{
+                        margin: 0 5% 0 5%;
+                    }
+                }
+                p{
+                    color: $textseccol;
+                    margin: 0 10%;
+                    text-align: center;
+                }
+                a{
+                    margin: 4% 10% 4% 10%;
+                }
+            }
         }
     }
 }
@@ -352,4 +407,12 @@ header{
             transform: rotate(-45deg);
         }
     }
+}
+
+.whovr .container > .whovr-head{
+    color: $textmaincol;
+    font-size: 1rem;
+    .header{
+        font-size: 3em
+    }   
 }
