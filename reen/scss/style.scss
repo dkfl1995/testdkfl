@@ -482,9 +482,13 @@ header{
         }
     }
 }
-
+$half: 100%;
 .lastest-works-bg{
     background-color: $thcol;
+    .container{
+        display: block;
+        margin: 0 auto;
+    }
     .lastest-works{
         padding: 7.5% 0;
         .head{
@@ -498,20 +502,22 @@ header{
                 padding: 0 0 0%;
             }
         }
+        
         .figure-list{
-            display: inline-flex;
-            justify-content: space-around;
+            display: flex;
             .figure{
                 @extend .sourcesans;
                 color: $textmaincol;
                 text-align: center;
                 background-color: white;
-                border: 1px solid rgba(0,0,0, .15) ;
+                border: 1px solid rgba(0,0,0, .15);
                 &:first-child{
+                    width: calc(570px - 15px);
                     margin-right: 15px;
                 }
                 &:last-child{
                     margin-left: 15px;
+                    width: calc(570px - 15px);
                 }
                 p{
                     &:first-of-type{
@@ -522,6 +528,9 @@ header{
                     &:last-of-type{
                         padding: .5% 0 5%;
                     }
+                }
+                img{
+                    width: 100%;
                 }
             }
         }
