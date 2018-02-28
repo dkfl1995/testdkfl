@@ -432,8 +432,8 @@ header{
             flex-wrap: wrap;
             .whovr-head{
                 padding: 3.5%;
-                width: 66.66%;
-                margin: 0 16.66%;
+                width: 80%;
+                margin: 0 10%;
                 color: $textmaincol;
                 text-align: center;
                 .header{
@@ -495,7 +495,7 @@ header{
             }
             p{
                 @extend .header-subtext;
-                padding-bottom: 6%;
+                padding: 0 0 0%;
             }
         }
         .figure-list{
@@ -525,8 +525,11 @@ header{
                 }
             }
         }
-        .carousel{
-            
+        .slicky{
+            width: 100%;
+            div{
+                
+            }
         }
     }
 }
