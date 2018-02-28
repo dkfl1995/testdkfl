@@ -488,56 +488,59 @@ $half: 100%;
     .container{
         display: block;
         margin: 0 auto;
-    }
-    .lastest-works{
-        padding: 7.5% 0;
-        .head{
-            color: $textmaincol;
-            text-align: center;
-            .header{
-                @extend .header-text;
-            }
-            p{
-                @extend .header-subtext;
-                padding: 0 0 0%;
-            }
-        }
-        
-        .figure-list{
-            display: flex;
-            .figure{
-                @extend .sourcesans;
+        .lastest-works{
+            padding: 7.5% 0;
+            .head{
                 color: $textmaincol;
                 text-align: center;
-                background-color: white;
-                border: 1px solid rgba(0,0,0, .15);
-                &:first-child{
-                    width: calc(570px - 15px);
-                    margin-right: 15px;
-                }
-                &:last-child{
-                    margin-left: 15px;
-                    width: calc(570px - 15px);
+                .header{
+                    @extend .header-text;
                 }
                 p{
-                    &:first-of-type{
-                        font-size: 1.75rem;
-                        font-weight: 600;
-                        padding: 5% 0 .5%;
-                    }
-                    &:last-of-type{
-                        padding: .5% 0 5%;
-                    }
-                }
-                img{
-                    width: 100%;
+                    @extend .header-subtext;
+                    padding: 0 0 0%;
                 }
             }
-        }
-        .slicky{
-            width: 100%;
-            div{ 
-                
+            
+            .figure-list{
+                display: flex;
+                width: 100%;
+                .figure{
+                    display: inline-block;
+                    @extend .sourcesans;
+                    color: $textmaincol;
+                    text-align: center;
+                    background-color: white;
+                    border: 1px solid rgba(0,0,0, .15);
+                    
+                    &:first-child{
+                        width: calc(50% - 15px);
+                        margin-right: 15px;
+                    }
+                    &:last-child{
+                        margin-left: 15px;
+                        width: calc(50% - 15px);
+                    }
+                    p{
+                        &:first-of-type{
+                            font-size: 1.75rem;
+                            font-weight: 600;
+                            padding: 5% 0 .5%;
+                        }
+                        &:last-of-type{
+                            padding: .5% 0 5%;
+                        }
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .slicky{
+                width: 100%;
+                div{ 
+                    
+                }
             }
         }
     }
