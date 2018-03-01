@@ -482,7 +482,6 @@ header{
         }
     }
 }
-$half: 100%;
 .lastest-works-bg{
     background-color: $thcol;
     .container{
@@ -490,6 +489,7 @@ $half: 100%;
         margin: 0 auto;
         .lastest-works{
             padding: 7.5% 0;
+            width: 100%;
             .head{
                 color: $textmaincol;
                 text-align: center;
@@ -537,9 +537,22 @@ $half: 100%;
                 }
             }
             .slicky{
-                width: 100%;
-                div{ 
+                margin: 7% -7.5px; 
+                .slick-list{ 
                     
+                    .slick-track{
+                        
+                        div{
+
+                            .slick-cont{
+                                text-align: center;
+                                
+                                img{
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
