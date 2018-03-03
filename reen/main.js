@@ -2,8 +2,12 @@ $(document).ready(
     $('.slicky').slick({
         dots: true,
         slidesToShow: 4,
-        autoplay: true,
+        slidesToScroll: 2,
+        infinite: true,
+        autoplay: false,
         autoplaySpeed: 3000,
+        prevArrow: '<li><button type="button" class="slick-prev">Previous</button></li>',
+        nextArrow: '<li><button type="button" class="slick-next">Next</button></li>',
         speed: 1000,
         responsive: [
             {

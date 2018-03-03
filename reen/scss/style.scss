@@ -168,7 +168,8 @@ header{
     }
 }
 
-.carousel ol{
+ol.carousel-indicators{
+    display: none;
     background-color: white;
     border-radius: .2rem;
     width: auto;
@@ -176,7 +177,6 @@ header{
     padding: 6px;
     margin: 0;
     bottom: -35px;
-    display: inline-flex;
     justify-content: center;
     li{
         background-color: $textmaincol;
@@ -356,15 +356,16 @@ header{
 }
 
 .carousel-control{
+    display: none;
     width: 40px !important;
     height: 40px !important;
     background-image: none !important;
-    opacity: .25 !important;
+    opacity: 0.25;
     background-color: $textmaincol !important;
     position: absolute;
     top: 50% !important;
     padding: 0 !important;
-    display: flex;
+    
     align-content: center;
     justify-content: center;
     .left, .right{
@@ -407,6 +408,15 @@ header{
         .line:last-child{
             transform: rotate(-45deg);
         }
+    }
+}
+
+#main-carousel:hover{
+    .carousel-control{
+        display: flex;
+    }
+    .carousel-indicators{
+        display: inline-flex;
     }
 }
 
@@ -498,7 +508,7 @@ header{
                 }
                 p{
                     @extend .header-subtext;
-                    padding: 0 0 0%;
+                    padding: 0 0 5%;
                 }
             }
             
@@ -536,24 +546,125 @@ header{
                     }
                 }
             }
+            //
             .slicky{
-                margin: 7% -7.5px; 
-                .slick-list{ 
-                    
-                    .slick-track{
-                        
-                        div{
+                //
+                margin: 7% auto; 
+                li{
+                    button{
 
-                            .slick-cont{
-                                text-align: center;
-                                
-                                img{
-                                    margin: auto;
-                                }
-                            }
-                        }
                     }
                 }
+                .slick-cont{
+                    //
+                    text-align: center;
+                    img{
+                        //
+                        margin: auto;
+                    }
+                }
+                .slick-prev, .slick-next{
+                    //
+                    background-color: $textmaincol;
+                    
+                }
+            }
+        }
+    }
+}
+ 
+.in-touch{
+    //
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    color: $textmaincol; 
+    padding: 10% 0;
+    //  
+    .header{
+        text-align: center;
+        @extend .header-text;
+        margin: 2% auto;
+    }
+    p{
+        display: flex;
+        margin: 0 auto;
+        width: 65%;
+        text-align: center;
+        @extend .header-subtext;
+    }
+    a:link, a:hover, a:visited, a:active, a::before{
+        display: flex;
+        margin: 4% auto;
+        @extend .text-deco-none;
+        background-color: $btnbgcol;
+        border-radius: 2px;
+        text-align: center;
+        color: white;
+        @extend .sourcesans;
+        @extend .uppercase;
+        font-size: 1.5rem;
+        font-weight: 800;
+        padding: 1% 2%;
+    }
+}
+
+.upfoot-bg{
+    background-color: $upfootcol;
+    padding: 5% 0;
+    .container{
+        //
+        margin: auto;
+    }
+    .upfoot-block{
+        //
+        display: flex;
+        color: white;
+        width: 25%;
+        flex-direction: column;
+        //
+        .upfoot-header{
+            @extend .uppercase;
+            @extend .lato;
+            font-size: 1.4rem;
+            letter-spacing: .1rem;
+            margin-bottom: 7%
+        }
+        a:first-of-type{
+            margin: 0 0 7% 0;
+            img{
+                filter: brightness(5);
+            }
+        }
+        p{
+            line-height: 2rem;
+            @extend .sourcesans;
+            font-size: 1.25rem;
+            letter-spacing: .1rem;
+            padding: 0 15px 5% 0;   
+        }
+        a:last-of-type{ 
+            align-self: center;
+            justify-self: stretch;  
+            &:link, &:visited, &:hover, &:active{
+                @extend .text-deco-none;
+                @extend .sourcesans;
+                color: white;
+                font-weight: 400;
+                font-style: 1.4rem;
+                letter-spacing: 0.05rem;
+            }
+        }
+        //
+        .upfoot-image-container{
+            margin: 0 0 0 -1%;
+            padding-right: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            img{
+                margin: 1%;
             }
         }
     }
