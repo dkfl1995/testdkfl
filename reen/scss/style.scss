@@ -97,7 +97,7 @@ header{
             padding: 0 5% 0 0;
         }
         p{
-            width: 10em;
+            min-width: 10em;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
@@ -631,9 +631,9 @@ ol.carousel-indicators{
             letter-spacing: .1rem;
             margin-bottom: 7%
         }
-        a:first-of-type{
+        .whovr-upfoot:first-of-type{
             margin: 0 0 7% 0;
-            img{
+            .bright{
                 filter: brightness(5);
             }
         }
@@ -643,17 +643,17 @@ ol.carousel-indicators{
             font-size: 1.25rem;
             letter-spacing: .1rem;
             padding: 0 15px 5% 0;   
+            color: $textseccol;
         }
-        a:last-of-type{ 
-            align-self: center;
-            justify-self: stretch;  
+        .whovr-upfoot:last-of-type{ 
             &:link, &:visited, &:hover, &:active{
                 @extend .text-deco-none;
                 @extend .sourcesans;
-                color: white;
                 font-weight: 400;
                 font-style: 1.4rem;
                 letter-spacing: 0.05rem;
+                color: $textseccol;
+                justify-content: flex-end;
             }
         }
         //
@@ -665,6 +665,119 @@ ol.carousel-indicators{
             justify-content: flex-start;
             img{
                 margin: 1%;
+            }
+        }
+        //
+        a.contactus{
+            display: flex;
+            
+            justify-content: flex-start;
+            padding: 0 7% 0 0;
+            &:last-child{
+                margin: 0;
+            }
+            &:link, &:visited, &:hover, &:active{
+                @extend .text-deco-none;
+                @extend .sourcesans;
+                color: white;
+                font-weight: 400;
+                font-style: 1.4rem;
+                letter-spacing: 0.05rem;
+            }
+            img{
+                @extend .centeredY;
+                padding: 0 5% 0 0;
+            }
+            p{
+                padding: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                color: $textseccol;
+            }
+        }
+        .input-wrap{
+            position: relative;
+            height: 4rem;
+            input{
+                position: absolute;
+                border: none;
+                border-radius: 2px;
+                &:first-child{
+                    @extend .sourcesans;
+                    font-size: 1.5rem;
+                    letter-spacing: .05rem;
+                    &::placeholder{
+                        color: #828e99;
+                    }
+                    background: #4e5c6c;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 35% 0 5%;
+                }
+                &:last-child{
+                    z-index: 2;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: 1.5% 1.5% calc(1.5% + 2px);
+                    padding: 0 4%;
+                    background: $btncol;
+                    @extend .sourcesans;
+                    @extend .uppercase;
+                    font-weight: 800;
+                    letter-spacing: .05rem;
+                    box-shadow: 0px 2px 1px #00a085;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background: $footcol;
+    .foot{
+        width: 100%;
+        padding: 2.5% 0;
+        display: inline-flex;
+        .dot{
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 1px;
+            margin: auto;
+        }
+        .foot-block{
+            display: flex;
+            width: 50%;
+            color: #616f7d;
+            &:first-child{
+                @extend .sourcesans;
+                font-size: 1.4rem;
+                font-weight: 600;
+                
+            }
+            &:last-child{
+                justify-content: flex-end;
+                ul{
+                    display: inline-flex;
+                    justify-content: flex-end;
+                    width: 100%;
+                    a{
+                        &:link, &:visited, &:hover, &:active{
+                            @extend .text-deco-none;
+                            @extend .sourcesans;
+                            color: #616f7d;
+                            font-weight: 600;
+                            font-size: 1.4rem;
+                            letter-spacing: 0.025rem;
+                        }
+                    }
+                    span{
+                        display: flex;
+                        margin: 0 2%;
+                    }
+                }
             }
         }
     }
