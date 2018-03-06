@@ -1,13 +1,14 @@
 $(document).ready(
     $('.slicky').slick({
+        arrows: false,
         dots: true,
         slidesToShow: 4,
         slidesToScroll: 2,
         infinite: true,
         autoplay: false,
         autoplaySpeed: 3000,
-        prevArrow: '<li><button type="button" class="slick-prev">Previous</button></li>',
-        nextArrow: '<li><button type="button" class="slick-next">Next</button></li>',
+        //prevArrow: '<li><button type="button" class="slick-prev">Previous</button></li>',
+        //nextArrow: '<li><button type="button" class="slick-next">Next</button></li>',
         speed: 1000,
         responsive: [
             {

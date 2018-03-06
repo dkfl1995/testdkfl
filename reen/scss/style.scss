@@ -7,7 +7,12 @@
 @import "page/home.scss"; 
 
 *{
-    box-sizing: border-box
+    box-sizing: border-box;
+    
+}
+
+html *{
+    font-size: 20px;
 }
 
 body{
@@ -39,22 +44,11 @@ body{
     text-transform: uppercase;
 }
 
-.top-head{
-    background-color: $thcol;
-    height: 8vh;
-}
-
 .top-head, header{
     border-bottom: 1px solid #e6e9ed;
     @extend .sourcesans;
     font-weight: 800;
     
-}
-
-header{
-    font-size: 1.25rem;
-    height: 16vh;
-    @extend .uppercase;
 }
 
 .container .contact, .container .header-box{
@@ -82,58 +76,64 @@ header{
     display: flex;
 }
 
-.contact{
-    a{
-        width: auto;
-        @extend .centeredY;
-        justify-content: center;
-        justify-self: flex-start;
-        padding: 0 7% 0 0;
-        &:last-child{
-            margin: 0;
-        }
-        img{
+.top-head{
+    background-color: $thcol;
+    .contact{
+        
+        a{
             @extend .centeredY;
-            padding: 0 5% 0 0;
-        }
-        p{
-            min-width: 10em;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+            justify-content: center;
+            justify-self: flex-start;
+            padding: 2.5% 7% 2.5% 0;
+            &:last-child{
+                margin: 0;
+            }
+            img{
+                @extend .centeredY;
+                padding: 0 5% 0 0;
+            }
+            p{
+                min-width: 10em;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
         }
     }
-}
-
-.social-network{
     
-    ul{
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        height: 100%;
-        li{
+    .social-network{
+        
+        ul{
             display: flex;
-            align-self: stretch;
-            padding: 0 2%;
-            &:first-child{
-                padding: 0 2% 0 0;
-            }
-            &:last-child{
-                padding: 0 0 0 2%;
-            }
-            a{
-                @extend .centeredY;
-                width: 100%;
-                img{
-                    @extend .centeredY;
+            justify-content: flex-end;
+            width: 100%;
+            height: 100%;
+            li{
+                display: flex;
+                align-self: stretch;
+                padding: 0 2%;
+                &:first-child{
+                    padding: 0 2% 0 0;
                 }
-            }
-        }    
+                &:last-child{
+                    padding: 0 0 0 2%;
+                }
+                a{
+                    @extend .centeredY;
+                    width: 100%;
+                    img{
+                        @extend .centeredY;
+                    }
+                }
+            }    
+        }
     }
 }
 
 header{
+    font-size: 1.25rem;
+    height: 100%;
+    @extend .uppercase;
     .container{
         display: flex;
         align-content: center;
@@ -158,11 +158,17 @@ header{
                 }
             }
             .search{
+                padding: 5% 0;
                 display: flex;
                 align-self: stretch;
                 & img{
                     align-self: center;
                 }
+            }
+            a{
+                display: flex;
+                align-self: stretch;
+                align-items: center;
             }
         }
     }
@@ -236,7 +242,7 @@ ol.carousel-indicators{
             }
         }
         &:first-child{
-            background-image: url('/img/image-carousel-big-1.png');
+            background-image: url('.././img/image-carousel-big-1.png');
             background-position: center;
             background-size: 100% 100%;
             .item-flex{
@@ -254,7 +260,7 @@ ol.carousel-indicators{
             }
         }
         &:nth-child(2){
-            background-image: url('/img/image-carousel-big-2.png');
+            background-image: url('.././img/image-carousel-big-2.png');
             background-position: center;
             background-size: cover;
             .item-flex{
@@ -269,7 +275,7 @@ ol.carousel-indicators{
             }
         }
         &:nth-child(3){
-            background-image: url('/img/image-carousel-big-3.png');
+            background-image: url('.././img/image-carousel-big-3.png');
             background-position: center;
             background-size: cover;
             .item-flex{
@@ -294,7 +300,7 @@ ol.carousel-indicators{
             }
         }
         &:nth-child(4){
-            background-image: url('/img/image-carousel-big-4.png');
+            background-image: url('.././img/image-carousel-big-4.png');
             background-position: center;
             background-size: cover;
             .item-flex{
@@ -325,7 +331,7 @@ ol.carousel-indicators{
             
         }
         &:nth-child(5){
-            background-image: url('/img/image-carousel-big-5.png');
+            background-image: url('.././img/image-carousel-big-5.png');
             background-position: center;
             background-size: cover;
             .item-flex{
@@ -755,7 +761,7 @@ footer{
                 @extend .sourcesans;
                 font-size: 1.4rem;
                 font-weight: 600;
-                
+
             }
             &:last-child{
                 justify-content: flex-end;
