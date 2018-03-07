@@ -11,8 +11,8 @@
     
 }
 
-html *{
-    font-size: 20px;
+html, body {
+    @include font-sizer();  
 }
 
 body{
@@ -202,7 +202,7 @@ ol.carousel-indicators{
 
 .carousel-inner{
     width: 100%;
-    height: 125vh;
+    height: 100vh;
     .item{
         width: 100%;
         height: 100%;
@@ -448,7 +448,7 @@ ol.carousel-indicators{
             flex-wrap: wrap;
             .whovr-head{
                 padding: 3.5%;
-                width: 80%;
+                width: auto;
                 margin: 0 10%;
                 color: $textmaincol;
                 text-align: center;

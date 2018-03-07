@@ -11,3 +11,23 @@
         padding-right: 0;
     }
 }
+
+@mixin font-sizer(){
+    @media screen and (max-width: ($scr-xs - 1)){
+        font-size: 7px;
+    }
+    @media screen and (min-width: $scr-xs){
+        font-size: 8px;
+    }
+    @media screen and (min-width: $scr-sm){
+        font-size: 10px;
+    }
+    @media screen and (min-width: $scr-md){
+        font-size: 11px;
+    }
+    @media screen and (min-width: $scr-lg){
+        font-size: 12px;
+    }
+    
+    
+}
