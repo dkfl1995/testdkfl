@@ -131,6 +131,8 @@ body{
 }
 
 header{
+    position: sticky;
+
     font-size: 1.25rem;
     height: 100%;
     @extend .uppercase;
@@ -139,36 +141,66 @@ header{
         align-content: center;
         justify-content: space-between;
         .header-box{
+            position: relative;
+            z-index: 1;
             width: 100%;
-            display: flex;
+            display: inline-flex;
             align-self: center;
             justify-content: space-between;
+            padding: 2.5% 0;
             & > *{
-                width: auto;
+                width: fit-content;
             }
             nav{
                 display: flex;
+                // flex: 1 0 auto;
+                flex-grow: 1;
                 justify-content: center;
-                width: 100%;
-                a{
-                    display: flex;
+                justify-self: center;
+                div{
+                    display: inline-flex;
                     align-self: stretch;
                     align-items: center;
-                    padding: 0 3%;
+                    margin: 0 3%;
+                    white-space: none;
                 }
             }
             .search{
-                padding: 5% 0;
                 display: flex;
-                align-self: stretch;
-                & img{
-                    align-self: center;
+                align-self: center;
+                justify-content: center;
+                align-content: center;
+                position: relative;
+                z-index: 1;
+                div{
+                    [name="searchFor"]{
+                        position: relative;
+                        width: auto;
+                        align-self: center;
+                        outline: none;  
+                        border: 1px solid transparent;
+                        margin: auto 0;
+                        padding: .5rem 3rem .5rem 1.5rem;
+                        transition: border 1.5s, border-radius .5s linear;
+                    }
+                    // [type="submit"] + [name="searchFor"], [name="searchFor"]
+                    .searchFor-anim{
+                        border: 1px solid rgba(0,0,0,.1);
+                        border-radius: 1.5rem;
+                    }
+                    [type="submit"]{
+                        outline: none;
+                        border: none;
+                        background: transparent;
+                        margin: auto 10px;
+                        padding: 0;
+                        position: absolute;
+                        right: 5px;
+                        top: 3px;
+                        bottom: 0;
+                        z-index: 3;
+                    }
                 }
-            }
-            a{
-                display: flex;
-                align-self: stretch;
-                align-items: center;
             }
         }
     }

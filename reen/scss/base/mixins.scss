@@ -6,7 +6,7 @@
         padding-right: ($gutter / 2);
     }
     @media screen and (max-width: ($scr-lg - 1)){
-        width: 95%;
+        width: 90%;
         padding-left: 0;
         padding-right: 0;
     }
@@ -14,20 +14,22 @@
 
 @mixin font-sizer(){
     @media screen and (max-width: ($scr-xs - 1)){
-        font-size: 7px;
+        font-size: 5px;
     }
     @media screen and (min-width: $scr-xs){
-        font-size: 8px;
+        font-size: 6px;
     }
     @media screen and (min-width: $scr-sm){
-        font-size: 10px;
+        font-size: 7px;
     }
     @media screen and (min-width: $scr-md){
-        font-size: 11px;
+        font-size: 9px;
     }
     @media screen and (min-width: $scr-lg){
-        font-size: 12px;
+        font-size: 11px;
     }
-    
+    @media screen and (min-width: $scr-xl){
+        font-size: 13px;
+    }
     
 }
