@@ -180,11 +180,10 @@ header{
                         outline: none;  
                         border: 1px solid transparent;
                         margin: auto 0;
-                        padding: .5rem 3rem .5rem 1.5rem;
+                        margin: .5rem 3rem .5rem 1.5rem;
                         transition: border 1.5s, border-radius .5s linear;
                     }
-                    // [type="submit"] + [name="searchFor"], [name="searchFor"]
-                    .searchFor-anim{
+                    .search-anim{
                         border: 1px solid rgba(0,0,0,.1);
                         border-radius: 1.5rem;
                     }

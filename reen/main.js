@@ -55,16 +55,34 @@ $(document).ready(
 );
 
 var searchFor = document.getElementsByName('searchFor')[0];
-console.log(searchFor);
+var submitIcon = document.getElementsByName('submitSearch')[0];
 
+// searchFor.style.visibility = 'visible';
 
-document.getElementsByName('submitSearch')[0].addEventListener('click', function (e){
-    searchFor.classList.add('searchFor-anim');
+function hasClass(element, cls){
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
+submitIcon.addEventListener('click', function (e){
+    if (searchFor.classList.contains('search-anim')){
+        searchFor.className.replace(/(?:^|\s)search-anim(?!\S)/, '');
+        searchFor.style.visibility = 'hidden';
+        console.log('nope');
+    } else {
+        searchFor.className += ' search-anim';
+        searchFor.style.visibility = 'visible';
+        searchFor.focus();
+        console.log(searchFor.className);
+    }
 });
 
-document.getElementsByName('submitSearch')[0].addEventListener('click', function (e){
-    searchFor.classList.remove('searchFor-anim');
-});
+// if(searchFor.classList !== 0){
+    // submitIcon.addEventListener('click', function (e){
+    //     searchFor.className.replace(/(?:^|\s)search-anim(?!\S)/, '');
+    //     searchFor.style.visibility = 'hidden';
+    //     console.log(e, searchFor.classList);
+    // });
+// }
 
 $('.prev').on('click', function(){
     $('.slicky').slick('slickPrev');
