@@ -180,14 +180,14 @@ header{
                         outline: none;  
                         border: 1px solid transparent;
                         margin: auto 0;
-                        margin: .5rem 3rem .5rem 1.5rem;
-                        transition: border 1.5s, border-radius .5s linear;
+                        padding: .5rem 3rem .5rem 1.5rem;
+                        transition: border 1.5s, border-radius .5s, visibility 1s linear;
                     }
                     .search-anim{
                         border: 1px solid rgba(0,0,0,.1);
                         border-radius: 1.5rem;
                     }
-                    [type="submit"]{
+                    [type="submit"], [type="image"]{
                         outline: none;
                         border: none;
                         background: transparent;
@@ -197,6 +197,13 @@ header{
                         right: 5px;
                         top: 3px;
                         bottom: 0;
+                        
+                    }
+                    [type="submit"]{
+                        z-index: 5;
+                        
+                    }
+                    [type="image"]{
                         z-index: 3;
                     }
                 }

@@ -1,3 +1,4 @@
+//SLICKJS carousel init
 
     // var prev = document.createElement('button');
     // prev.className = 'prev';
@@ -54,35 +55,39 @@ $(document).ready(
     })
 );
 
-var searchFor = document.getElementsByName('searchFor')[0];
-var submitIcon = document.getElementsByName('submitSearch')[0];
+//input-search animation
 
-// searchFor.style.visibility = 'visible';
+var searchFor = document.getElementsByName('searchFor')[0];
+var submitBtn = document.getElementsByName('submitSearch')[0];
+var submitIco = document.getElementsByName('submitSearchIco')[0];
+submitBtn.style.display = 'none';
 
 function hasClass(element, cls){
     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 }
 
-submitIcon.addEventListener('click', function (e){
-    if (searchFor.classList.contains('search-anim')){
-        searchFor.className.replace(/(?:^|\s)search-anim(?!\S)/, '');
-        searchFor.style.visibility = 'hidden';
-        console.log('nope');
-    } else {
-        searchFor.className += ' search-anim';
+submitIco.addEventListener('click', function (e){
+    if (searchFor.classList.contains('search-anim') === false){
+        searchFor.classList.add('search-anim');
         searchFor.style.visibility = 'visible';
         searchFor.focus();
-        console.log(searchFor.className);
+        submitBtn.style.display = 'block';
+        console.log(searchFor.classList);
+    }  else {
+        console.log(e.target);
     }
 });
 
-// if(searchFor.classList !== 0){
-    // submitIcon.addEventListener('click', function (e){
-    //     searchFor.className.replace(/(?:^|\s)search-anim(?!\S)/, '');
-    //     searchFor.style.visibility = 'hidden';
-    //     console.log(e, searchFor.classList);
-    // });
-// }
+document.body.addEventListener('click', function (e) {
+    if(e.target !== submitBtn && e.target !== searchFor && searchFor.classList.contains('search-anim') === true){
+        searchFor.classList.remove('search-anim');
+        searchFor.style.visibility = 'hidden';
+        submitBtn.style.display = 'none';
+        console.log(e.target);
+    } else {
+        console.log('SMTH WRONG');
+    }
+});
 
 $('.prev').on('click', function(){
     $('.slicky').slick('slickPrev');
