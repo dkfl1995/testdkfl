@@ -172,7 +172,7 @@ header{
                 align-content: center;
                 position: relative;
                 z-index: 1;
-                div{
+                
                     [name="searchFor"]{
                         position: relative;
                         width: auto;
@@ -206,9 +206,28 @@ header{
                     [type="image"]{
                         z-index: 3;
                     }
-                }
+                
             }
         }
+    }
+}
+
+.indicators{
+    content:'';
+    background-color: $textmaincol;
+    display: flex;
+    align-self: center;
+    margin: 3px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white; 
+    border-radius: 50%;
+    &.active, &.slick-active{
+        background-color: $btncol;
+        margin: 3px;
+        width: 16px;
+        height: 16px;
+        
     }
 }
 
@@ -223,18 +242,8 @@ ol.carousel-indicators{
     bottom: -35px;
     justify-content: center;
     li{
-        background-color: $textmaincol;
-        display: flex;
-        align-self: center;
-        margin: 3px;
-        width: 16px;
-        height: 16px;
-        &.active{
-            background-color: $btncol;
-            margin: 3px;
-            width: 16px;
-            height: 16px;
-        }
+        @extend .indicators;
+        
     }
 }
 
@@ -591,26 +600,59 @@ ol.carousel-indicators{
                 }
             }
             //
-            .slicky{
-                //
-                margin: 7% auto; 
-                li{
-                    button{
-
-                    }
-                }
-                .slick-cont{
+            .slick-box{
+                position: relative;
+                .slicky{
                     //
-                    text-align: center;
-                    img{
+                    margin: 6% auto; 
+                    .slick-cont{
                         //
-                        margin: auto;
+                        text-align: center;
+                        img{
+                            //
+                            margin: auto;
+                        }
+                    }
+                    .slick-arrow{
+                        //
+                        
+                    }
+                    .slick-dots{
+                        bottom: -25%; 
+                        li{
+                            margin: 2px;
+                            button:before{
+                                @extend .indicators;
+                            }
+                        }
                     }
                 }
-                .slick-prev, .slick-next{
-                    //
-                    background-color: $textmaincol;
+                .custom-arr{
+                    position: absolute;
+                    bottom: -25%;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    right: 50%;
+                    display: inline-flex;
+                    justify-content: space-between;
+                    align-content: center;
+                    width: 125px;
                     
+                    & *{
+                        
+                        height: 24px;
+                    }
+                    .slick-prev, .slick-next{
+                        background: $textmaincol;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 2px;
+                        &::before{
+                            content: '';
+                            
+                            
+                        }
+                    }
                 }
             }
         }
