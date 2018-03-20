@@ -63,27 +63,27 @@ submitBtn.style.display = 'none';
 //     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 // }
 
-$('body').on('click', function (event){
-    console.log($(this).parentsUntil('.search'));
-    if (!$('[name="searchFor"]').hasClass('search-anim') && $(event.target).hasClass('.deco-button') || $(event.target).is('img')){
+$(document).on('click', function (event){
+    
+    if ($(event.target).parents('.search').length >= 1 && !$('[name="searchFor"]').hasClass('search-anim') && $(event.target).hasClass('deco-button')){
         // console.log($(event.target) , 'has class deco-button' +  $(this).hasClass('deco-button'));
-        // if(){
+
             $('[name="searchFor"]').addClass('search-anim');
             searchFor.style.visibility = 'visible';
             searchFor.focus();
             submitBtn.style.display = 'block';
             submitIco.style.display = 'none';
-            console.log($(event.target).hasClass('.deco-button') || $(event.target).is('img'));
+            console.log($(event.target).parents('.search').length);
             
-        // }
-    } else if($('[name="searchFor"]').hasClass('search-anim') && !$(this).parentsUntil('.search')) {
+
+    } else if($(event.target).parents('.search').length < 1){
         $('[name="searchFor"]').removeClass('search-anim');
         searchFor.style.visibility = 'hidden';
         submitBtn.style.display = 'none';
         submitIco.style.display = 'block';
-        console.log($('[name="searchFor"]').hasClass('search-anim') && $(event.target).parentsUntil('.search'));
-    } else {
-        console.log('nothing');
+        console.log($(event.target).parents('.search').length);
+    } else if($(event.target).hasClass('subm-button')){
+        console.log('send data');
     }
 });
 
