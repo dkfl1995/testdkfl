@@ -1,13 +1,5 @@
 //SLICKJS carousel init
 
-    // var prev = document.createElement('button');
-    // prev.className = 'prev';
-    // prev.innerHTML = 'prev';
-    // var next = document.createElement('button');
-    // next.innerHTML = 'next';
-    // next.className = 'next';
-    // this.console.log(prev);
-
 $(document).ready(
     $('.slicky').slick({
         arrows: true,
@@ -33,14 +25,14 @@ $(document).ready(
                 infinite: true,
             }
         }, {
-            breakpoint: 600,
+            breakpoint: 480,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
             }
         }, {
-            breakpoint: 480,
+            breakpoint: 300,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -59,21 +51,16 @@ var submitBtn = document.getElementsByName('submitSearch')[0];
 var submitIco = document.getElementsByName('submitSearchIco')[0];
 submitBtn.style.display = 'none';
 
-// function hasClass(element, cls){
-//     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-// }
-
 $(document).on('click', function (event){
     
     if ($(event.target).parents('.search').length >= 1 && !$('[name="searchFor"]').hasClass('search-anim') && $(event.target).hasClass('deco-button')){
-        // console.log($(event.target) , 'has class deco-button' +  $(this).hasClass('deco-button'));
 
-            $('[name="searchFor"]').addClass('search-anim');
-            searchFor.style.visibility = 'visible';
-            searchFor.focus();
-            submitBtn.style.display = 'block';
-            submitIco.style.display = 'none';
-            console.log($(event.target).parents('.search').length);
+        $('[name="searchFor"]').addClass('search-anim');
+        searchFor.style.visibility = 'visible';
+        searchFor.focus();
+        submitBtn.style.display = 'block';
+        submitIco.style.display = 'none';
+        console.log($(event.target).parents('.search').length);
             
 
     } else if($(event.target).parents('.search').length < 1){

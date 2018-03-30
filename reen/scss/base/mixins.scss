@@ -12,24 +12,68 @@
     }
 }
 
+@mixin lato{
+    font-family: $lato;
+}
+
+@mixin sourcesans{
+    font-family: $sourcesans;
+}
+
+@mixin text-deco-none{
+    text-decoration: none;
+}
+
+@mixin align-right{
+    text-align: right;
+}
+
+@mixin uppercase{
+    text-transform: uppercase;
+}
+
+@mixin centeredY{
+    align-self: center;
+    display: flex;
+}
+
+@mixin indicators{
+    content:'';
+    background-color: $textmaincol;
+    display: flex;
+    align-self: center;
+    margin: 3px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white; 
+    border-radius: 50%;
+    &.active, &.slick-active{
+        background-color: $btncol;
+        margin: 3px;
+        width: 16px;
+        height: 16px;
+        
+    }
+}
+
 @mixin font-sizer(){
     @media screen and (max-width: ($scr-xs - 1)){
-        font-size: 5px;
+        font-size: 10px;
     }
     @media screen and (min-width: $scr-xs){
-        font-size: 6px;
+        font-size: 10px;
     }
-    @media screen and (min-width: $scr-sm){
-        font-size: 7px;
-    }
-    @media screen and (min-width: $scr-md){
-        font-size: 9px;
-    }
-    @media screen and (min-width: $scr-lg){
-        font-size: 11px;
-    }
-    @media screen and (min-width: $scr-xl){
-        font-size: 13px;
-    }
+    // @media screen and (min-width: $scr-sm){
+    //     font-size: 9px;
+    // }
+    // @media screen and (min-width: $scr-md){
+    //     font-size: 10px;
+    // }
+    // @media screen and (min-width: $scr-lg){
+    //     font-size: 10px;
+    // }
+    // @media screen and (min-width: $scr-xl){
+    //     font-size: 11px;
+    // }
     
 }
