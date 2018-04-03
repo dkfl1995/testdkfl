@@ -1,6 +1,6 @@
 //SLICKJS carousel init
-
-$(document).ready(
+$(document).ready(function () {
+      
     $('.slicky').slick({
         arrows: true,
         prevArrow: '<div class="slick-prev"><div class="line"></div><div class="line"></div></div>',
@@ -41,8 +41,8 @@ $(document).ready(
                 autoplaySpeed: 2000,
             }
         }]
-    })
-);
+    });
+});
 
 //input-search animation
 var search = document.getElementsByClassName('search')[0];
@@ -74,17 +74,6 @@ $(document).on('click', function (event){
     }
 });
 
-// document.body.addEventListener('click', function (e) {
-//     if(e.target !== submitIco && e.target !== submitBtn && searchFor.classList.contains('search-anim') === true){
-//         searchFor.classList.remove('search-anim');
-//         searchFor.style.visibility = 'hidden';
-//         submitBtn.style.display = 'none';
-//         console.log(e.target);
-//     } else {
-//         console.log('SMTH WRONG');
-//     }
-// });
-
 $('.prev').on('click', function(){
     $('.slicky').slick('slickPrev');
 });
@@ -93,6 +82,9 @@ $('.next').on('click', function(){
 });
 
 
-
-
-
+$(document).on('scroll', function() {
+    console.log($('header').scrollTop());
+    if($('header').scrollTop() === 0){
+        $('header').addClass('transform-header');
+    }
+}); 
