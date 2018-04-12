@@ -82,9 +82,25 @@ $('.next').on('click', function(){
 });
 
 
-$(document).on('scroll', function() {
-    console.log($('header').scrollTop());
-    if($('header').scrollTop() === 0){
-        $('header').addClass('transform-header');
-    }
-}); 
+
+$(document).ready(function() {
+    var ev = $('header');    
+	var pos = ev.position();					   
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= pos.top ) {
+			ev.addClass("stick");
+		} else {
+            ev.removeClass("stick");	
+		}
+	});
+});
+
+
+// $(window).on('scroll', function() {
+//     console.log($('header').scrollTop());
+//     if($('header').scrollTop() === 0){
+//         $('header').addClass('transform-header');
+//     }
+// }); 
+

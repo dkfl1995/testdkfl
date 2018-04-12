@@ -74,25 +74,6 @@ body{
     @include centeredY;
 }
 
-.header-text{
-    @extend .lato;
-    font-size: 5rem;
-    font-weight: 600;
-    line-height: 8rem;
-}
-
-.header-subtext{
-    @extend .sourcesans;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: .075rem;
-    line-height: 3rem;
-}
-
-%indicators{
-    @include indicators;
-}
-
 .whovr-bg{
     .container{
         .whovr{
@@ -110,10 +91,10 @@ body{
                 color: $textmaincol;
                 text-align: center;
                 .header{
-                    @extend .header-text;
+                    @include header-text;
                 }   
                 p{
-                    @extend .header-subtext;
+                    @include header-subtext;
                 }
             }
             .whovr-info{
@@ -137,13 +118,13 @@ body{
                     flex-wrap: wrap;
                     padding: 0 25% 0 5%;
                     .info-head{
-                        @extend .lato;
+                        @include lato;
                         font-size: 2rem;
                         letter-spacing: .025rem;
                         line-height: normal
                     }
                     p{
-                        @extend .sourcesans;
+                        @include sourcesans;
                         font-size: 1.25rem;
                         padding: 5% 0;
                         max-height: 100px;
@@ -169,10 +150,10 @@ body{
                 color: $textmaincol;
                 text-align: center;
                 .header{
-                    @extend .header-text;
+                    @include header-text;
                 }
                 p{
-                    @extend .header-subtext;
+                    @include header-subtext;
                     padding: 0 0 5%;
                 }
             }
@@ -182,7 +163,7 @@ body{
                 width: 100%;
                 .figure{
                     display: inline-block;
-                    @extend .sourcesans;
+                    @include sourcesans;
                     color: $textmaincol;
                     text-align: center;
                     background-color: white;
@@ -295,7 +276,7 @@ body{
     //  
     .header{
         text-align: center;
-        @extend .header-text;
+        @include header-text;
         margin: 2% auto;
     }
     p{
@@ -303,18 +284,18 @@ body{
         margin: 0 auto;
         width: 65%;
         text-align: center;
-        @extend .header-subtext;
+        @include header-subtext;
     }
     a:link, a:hover, a:visited, a:active, a::before{
         display: flex;
         margin: 4% auto;
-        @extend .text-deco-none;
+        @include text-deco-none;
         background-color: $btnbgcol;
         border-radius: 2px;
         text-align: center;
         color: white;
-        @extend .sourcesans;
-        @extend .uppercase;
+        @include sourcesans;
+        @include uppercase;
         font-size: 1.5rem;
         font-weight: 800;
         padding: 1% 2%;
@@ -323,7 +304,7 @@ body{
 
 .upfoot-bg{
     background-color: $upfootcol;
-    padding: 5% 0;
+    
     .container{
         display: flex;
         flex-flow: wrap;
@@ -337,10 +318,11 @@ body{
         width: 25%;
         min-width: 250px;
         flex-direction: column;
+        padding: 5% 0;
         //
         .upfoot-header{
-            @extend .uppercase;
-            @extend .lato;
+            @include uppercase;
+            @include lato;
             font-size: 1.4rem;
             letter-spacing: .1rem;
             margin-bottom: 7%
@@ -353,7 +335,7 @@ body{
         }
         p{
             line-height: 2rem;
-            @extend .sourcesans;
+            @include sourcesans;
             font-size: 1.25rem;
             letter-spacing: .1rem;
             padding: 0 15px 5% 0;   
@@ -361,8 +343,8 @@ body{
         }
         .whovr-upfoot:last-of-type{ 
             &:link, &:visited, &:hover, &:active{
-                @extend .text-deco-none;
-                @extend .sourcesans;
+                @include text-deco-none;
+                @include sourcesans;
                 font-weight: 400;
                 font-style: 1.4rem;
                 letter-spacing: 0.05rem;
@@ -393,15 +375,15 @@ body{
                 margin: 0;
             }
             &:link, &:visited, &:hover, &:active{
-                @extend .text-deco-none;
-                @extend .sourcesans;
+                @include text-deco-none;
+                @include sourcesans;
                 color: white;
                 font-weight: 400;
                 font-style: 1.4rem;
                 letter-spacing: 0.05rem;
             }
             img{
-                @extend .centeredY;
+                @include centeredY;
                 padding: 0 5% 0 0;
             }
             p{
@@ -420,7 +402,7 @@ body{
                 border: none;
                 border-radius: 2px;
                 &:first-child{
-                    @extend .sourcesans;
+                    @include sourcesans;
                     font-size: 1.5rem;
                     letter-spacing: .05rem;
                     &::placeholder{
@@ -439,8 +421,8 @@ body{
                     margin: 1.5% 1.5% calc(1.5% + 2px);
                     padding: 0 4%;
                     background: $btncol;
-                    @extend .sourcesans;
-                    @extend .uppercase;
+                    @include sourcesans;
+                    @include uppercase;
                     font-weight: 800;
                     letter-spacing: .05rem;
                     box-shadow: 0px 2px 1px #00a085;
@@ -457,7 +439,8 @@ footer{
         .foot{
             width: 100%;
             padding: 2.5% 0;
-            display: inline-flex;
+            display: flex;
+            flex-wrap: wrap;
             .dot{
                 width: 2px;
                 height: 2px;
@@ -467,24 +450,25 @@ footer{
             }
             .foot-block{
                 display: flex;
-                width: 50%;
+                flex-grow: 1;
                 color: #616f7d;
                 &:first-child{
-                    @extend .sourcesans;
+                    @include sourcesans;
                     font-size: 1.4rem;
                     font-weight: 600;
     
                 }
                 &:last-child{
-                    justify-content: flex-end;
+                    // justify-content: flex-end;
                     ul{
                         display: inline-flex;
+                        flex-grow: 1;
                         justify-content: flex-end;
                         width: 100%;
                         a{
                             &:link, &:visited, &:hover, &:active{
-                                @extend .text-deco-none;
-                                @extend .sourcesans;
+                                @include text-deco-none;
+                                @include sourcesans;
                                 color: #616f7d;
                                 font-weight: 600;
                                 font-size: 1.4rem;
@@ -573,58 +557,178 @@ footer{
         }
     }
 
+    .stick {
+        position:fixed;
+        top:0;
+        padding: 1.5% 0;
+        width: 100%;
+    }
+
 // Header for less 480px wide
+// header{
+//     position: sticky;
+//     z-index: 10;
+//     font-size: 1.25rem;
+//     text-transform: uppercase;
+//     background: white;
+//     .container{
+//         display: flex;
+//         align-content: center;
+//         justify-content: space-between;
+//         .header-box{
+//             position: relative;
+//             z-index: 1;
+//             width: 100%;
+//             display: inline-flex;
+//             flex-wrap: wrap;
+//             align-self: center;
+//             justify-content: space-between;
+            
+//             .logo{
+//                 display: flex;
+//                 align-items: center;
+//                 // width: 25rem;
+//                 img{                    
+//                     padding: 20% 0;
+//                     flex: 1 0 auto;
+//                     max-width: 75px;
+
+//                     // min-width: 100%;
+//                 }
+//             }
+//             nav{  
+//                 display: flex;
+//                 justify-content: space-between;
+//                 justify-self: center;
+//                 flex: 1 0 auto;
+//                 overflow: hidden; 
+//                 margin: 0 5%;
+//                 div{
+//                     display: flex;
+//                     align-self: stretch;
+//                     align-items: center;
+//                     white-space: none;
+//                     font-size: 1.5rem;
+                    
+                    
+//                     &:nth-of-type(6){
+//                         display: inline-flex;
+//                         flex-shrink: 0;
+//                 }
+//             }
+//             }
+//             .search{
+//                 display: flex;
+//                 align-self: center;
+//                 justify-content: center;
+//                 align-content: center;
+//                 position: relative;
+//                 z-index: 1;
+//                     [name="submitSearchIco"] img, [name="submitSearch"] img{
+//                         width: 1.3rem;
+                        
+//                     }
+//                     [name="searchFor"]{
+//                         position: relative;
+//                         width: auto;
+//                         // height: 3rem;
+//                         align-self: center;
+//                         outline: none;  
+//                         border: 1px solid transparent;
+//                         margin: auto 0;
+//                         padding: .5rem 3rem .5rem 1.5rem;
+//                         transition: border 1.5s, border-radius .5s, visibility 1s linear;
+//                     }
+//                     .search-anim{
+//                         border: 1px solid rgba(0,0,0,.1);
+//                         border-radius: 1.5rem;
+//                     }
+//                     [type="submit"], [type="image"]{
+//                         outline: none;
+//                         border: none;
+//                         background: transparent;
+//                         margin: auto .75rem;
+//                         padding: 0;
+//                         position: absolute;
+//                         right: 0;
+//                         top: 10%;
+//                         bottom: 0;
+                        
+//                     }
+//                     [type="submit"]{
+//                         z-index: 5;
+                        
+//                     }
+//                     [type="image"]{
+//                         z-index: 3;
+//                     }               
+//                 }
+//             }
+//         }
+//     }
+    
+.stick {
+    position: fixed;
+    top:0;
+    padding: 1.5% 0;
+    width: 100%;
+}
+
 header{
-    position: sticky;
-    top: 0;
     z-index: 10;
     font-size: 1.25rem;
-    height: 100%;
+    position: relative;
     text-transform: uppercase;
     background: white;
+    padding: 2.5% 0;
+    transition: padding .5s, top .5s;
     .container{
         display: flex;
         align-content: center;
         justify-content: space-between;
+        
         .header-box{
             position: relative;
             z-index: 1;
             width: 100%;
             display: inline-flex;
+            flex-wrap: wrap;
+            
             align-self: center;
             justify-content: space-between;
-            
+            // Reen logo
             .logo{
                 display: flex;
                 align-items: center;
-                // width: 25rem;
-                img{                    
-                    padding: 20% 0;
-                    flex: 1 0 auto;
-                    max-width: 75px;
-
-                    // min-width: 100%;
+                width: 10rem;
+                img{ 
+                    
+                    width: 100%;
+                    min-width: 75px;
+                    max-width: 150px;
+                    
                 }
+
             }
             nav{  
+                // width: fit-content;
                 display: flex;
+                // flex: 1 0 auto;
+                flex-grow: 1;
+                order: 2; 
                 justify-content: space-between;
                 justify-self: center;
                 overflow: hidden; 
-                margin: 0 5%;
+                margin: 1% 0;
                 div{
-                    display: flex;
+                    margin: 1rem;
+                    display: none;
                     align-self: stretch;
                     align-items: center;
                     white-space: none;
                     font-size: 1.5rem;
-                    
-                    
-                    &:nth-of-type(6){
-                        display: inline-flex;
-                        flex-shrink: 0;
+                    flex-shrink: 0;
                 }
-            }
             }
             .search{
                 display: flex;
@@ -633,49 +737,53 @@ header{
                 align-content: center;
                 position: relative;
                 z-index: 1;
-                    [name="submitSearchIco"] img, [name="submitSearch"] img{
-                        width: 1.3rem;
-                        
-                    }
-                    [name="searchFor"]{
-                        position: relative;
-                        width: auto;
-                        // height: 3rem;
-                        align-self: center;
-                        outline: none;  
-                        border: 1px solid transparent;
-                        margin: auto 0;
-                        padding: .5rem 3rem .5rem 1.5rem;
-                        transition: border 1.5s, border-radius .5s, visibility 1s linear;
-                    }
-                    .search-anim{
-                        border: 1px solid rgba(0,0,0,.1);
-                        border-radius: 1.5rem;
-                    }
-                    [type="submit"], [type="image"]{
-                        outline: none;
-                        border: none;
-                        background: transparent;
-                        margin: auto .75rem;
-                        padding: 0;
-                        position: absolute;
-                        right: 0;
-                        top: 10%;
-                        bottom: 0;
-                        
-                    }
-                    [type="submit"]{
-                        z-index: 5;
-                        
-                    }
-                    [type="image"]{
-                        z-index: 3;
-                    }               
+                [name="submitSearchIco"] img, [name="submitSearch"] img{
+                    width: 1.3rem;
+                    
                 }
+                [name="searchFor"]{
+                    position: relative;
+                    width: auto;
+                    // height: 3rem;
+                    align-self: center;
+                    outline: none;  
+                    border: 1px solid transparent;
+                    margin: auto 0;
+                    padding: .5rem 3rem .5rem 1.5rem;
+                    transition: border 1.5s, border-radius .5s, visibility 1s linear;
+                }
+                .search-anim{
+                    border: 1px solid rgba(0,0,0,.1);
+                    border-radius: 1.5rem;
+                }
+                [type="submit"], [type="image"]{
+                    outline: none;
+                    border: none;
+                    background: transparent;
+                    margin: auto .75rem;
+                    padding: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 10%;
+                    bottom: 0;
+                    
+                }
+                [type="submit"]{
+                    z-index: 5;
+                    
+                }
+                [type="image"]{
+                    z-index: 3;
+                }   
             }
         }
     }
-    
+}
+
+.transform-header{
+    padding: 1.5% 0;
+}
+
 // Front-face carousel for less than 480px
 
     %indicators{
@@ -719,24 +827,24 @@ header{
                 height: 100%;
                 display: flex !important;
                 flex-wrap: wrap;
-                
                 .text-head{
-                    font-size: 6rem !important;
+                    font-size: 4rem !important;
                     color: white;
                     @include lato;
                     @include uppercase;
                     font-weight: 800;
-                    line-height: 9rem;
+                    line-height: 6rem;
                     letter-spacing: 0.075em;
                 }
                 p{
-                    font-size: 2rem !important;
+                    font-size: 1.8rem !important;
                     color: white;
                     @include sourcesans;
                     width: 70%;
-                    line-height: 3rem;
+                    line-height: 2rem;
                 }
                 a:link, a:hover, a:visited, a:active, a::before{
+                    display: flex;
                     @include text-deco-none;
                     background-color: $btnbgcol;
                     border-radius: 2px;
@@ -744,10 +852,10 @@ header{
                     color: white;
                     @include sourcesans;
                     @include uppercase;
-                    font-size: 2rem !important;
+                    font-size: 1.5rem !important;
                     font-weight: 800;
-                    padding: 1.75% 0;
-                    width: 30% !important;
+                    padding: 1.75% 10px;
+                    min-width: 30% !important;
                 }
             }
             &:first-child{
@@ -924,6 +1032,257 @@ header{
             display: inline-flex;
         }
     }
+
+
+    .lastest-works-bg{
+        background-color: $thcol;
+        .container{
+            display: block;
+            margin: 0 auto;
+            .lastest-works{
+                padding: 7.5% 0;
+                width: 100%;
+                .head{
+                    color: $textmaincol;
+                    text-align: center;
+                    .header{
+                        @include header-text;
+                    }
+                    p{
+                        @include header-subtext;
+                        padding: 0 0 5%;
+                    }
+                }
+                
+                .figure-list{
+                    display: block;
+                    width: 100%;
+                    .figure{
+                        display: block;
+                        @include sourcesans;
+                        color: $textmaincol;
+                        text-align: center;
+                        background-color: white;
+                        border: 1px solid rgba(0,0,0, .15);
+                        &:first-child{
+                            width: 100%;
+                            margin: 20px 0;
+                        }
+                        &:last-child{
+                            width: 100%;
+                            margin: 20px 0;
+                        }
+                        p{
+                            &:first-of-type{
+                                font-size: 1.75rem;
+                                font-weight: 600;
+                                padding: 5% 0 .5%;
+                            }
+                            &:last-of-type{
+                                padding: .5% 0 5%;
+                            }
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    } 
+                }
+                //
+                .slick-box{
+                    position: relative;
+                    .slicky{
+                        //
+                        margin: 6% auto;
+                        height: auto;
+                        .slick-cont{
+                            position: relative; 
+                            
+                            text-align: center;
+                            width: 100%;
+                            height: 100%;
+                             
+                            img{
+                                position: relative;
+                                right: 0;
+                                left: 0;
+                                top: 0;
+                                
+                                width: 100%;
+                                // object-position: center;
+                                // object-fit: contain;
+                                    
+                            }
+                        }
+                        .slick-slide{
+                            width: 100%;
+                            padding: .2%;
+                            height: auto;
+                        }
+                        .slick-dots{
+                            bottom: -25%; 
+                            li{
+                                margin: 2px;
+                                button:before{
+                                    @include indicators;
+                                }
+                            }
+                        }
+                    }
+                    .custom-arr{
+                        position: absolute;
+                        bottom: -25%;
+                        transform: translateX(-50%);
+                        left: 50%;
+                        right: 50%;
+                        display: inline-flex;
+                        justify-content: space-between;
+                        align-content: center;
+                        width: 125px;
+                        
+                        & *{
+                            
+                            height: 24px;
+                        }
+                        .slick-prev, .slick-next{
+                            background: $textmaincol;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 2px;
+                            &::before{
+                                content: '';
+                                
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 640px){
+    .stick {
+        position:fixed;
+        top:0;
+        padding: 1.5% 0;
+        width: 100%;
+    }
+
+    header{
+        z-index: 10;
+        font-size: 1.25rem;
+        position: relative;
+        text-transform: uppercase;
+        background: white;
+        padding: 2.5% 0;
+        transition: padding .5s, top .5s;
+        .container{
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            
+            .header-box{
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                display: inline-flex;
+                flex-wrap: wrap;
+                
+                align-self: center;
+                justify-content: space-between;
+                // Reen logo
+                .logo{
+                    display: flex;
+                    align-items: center;
+                    // width: 25rem;
+                    img{ 
+                        
+                        width: 100%;
+                        min-width: 75px;
+                        max-width: 150px;
+                        
+                    }
+
+                }
+                nav{  
+                    // width: fit-content;
+                    display: flex;
+                    // flex: 1 0 auto;
+                    flex-grow: 1;
+                    order: 2; 
+                    justify-content: space-between;
+                    justify-self: center;
+                    overflow: hidden; 
+                    margin: 1% 0;
+                    div{
+                        margin: 1rem;
+                        display: none;
+                        align-self: stretch;
+                        align-items: center;
+                        white-space: none;
+                        font-size: 1.5rem;
+                        // &:nth-of-type(6){
+                        //     display: inline-flex;
+                        //     flex-shrink: 0;
+                        // }
+                        flex-shrink: 0;
+                    }
+                }
+                .search{
+                    display: flex;
+                    align-self: center;
+                    justify-content: center;
+                    align-content: center;
+                    position: relative;
+                    z-index: 1;
+                    [name="submitSearchIco"] img, [name="submitSearch"] img{
+                        width: 1.3rem;
+                        
+                    }
+                    [name="searchFor"]{
+                        position: relative;
+                        width: auto;
+                        // height: 3rem;
+                        align-self: center;
+                        outline: none;  
+                        border: 1px solid transparent;
+                        margin: auto 0;
+                        padding: .5rem 3rem .5rem 1.5rem;
+                        transition: border 1.5s, border-radius .5s, visibility 1s linear;
+                    }
+                    .search-anim{
+                        border: 1px solid rgba(0,0,0,.1);
+                        border-radius: 1.5rem;
+                    }
+                    [type="submit"], [type="image"]{
+                        outline: none;
+                        border: none;
+                        background: transparent;
+                        margin: auto .75rem;
+                        padding: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 10%;
+                        bottom: 0;
+                        
+                    }
+                    [type="submit"]{
+                        z-index: 5;
+                        
+                    }
+                    [type="image"]{
+                        z-index: 3;
+                    }   
+                }
+            }
+        }
+    }
+
+    .transform-header{
+        padding: 1.5% 0;
+    }
 }
 
 
@@ -932,7 +1291,7 @@ header{
 // top header for more than 480px
 
     .top-head{
-        position: sticky;
+        
         .container{
             display: flex;
             flex-flow: wrap;
@@ -993,13 +1352,13 @@ header{
                         padding: 0 0 0 2%;
                     }
                     a{
-                        // @extend .centeredY;
+                        // @include centeredY;
                         // width: 100%;
                         height: 100%;
                         display: flex;
                         align-items: center;
                         img{
-                            // @extend .centeredY;
+                            // @include centeredY;
                             // min-height: .5%;
                             height: auto;
                         }
@@ -1010,17 +1369,21 @@ header{
     }
 
     // Header for more than 480px wide
+    .stick {
+        position:fixed;
+        top:0;
+        padding: 1.5% 0;
+        width: 100%;
+    }
 
     header{
-        position: sticky;
-        top: 0;
         z-index: 10;
         font-size: 1.25rem;
-        
+        position: relative;
         text-transform: uppercase;
         background: white;
         padding: 2.5% 0;
-        transition: padding .5s;
+        transition: padding .5s, top .5s;
         .container{
             display: flex;
             align-content: center;
@@ -1031,13 +1394,15 @@ header{
                 z-index: 1;
                 width: 100%;
                 display: inline-flex;
+                flex-wrap: wrap;
+                
                 align-self: center;
                 justify-content: space-between;
                 // Reen logo
                 .logo{
                     display: flex;
                     align-items: center;
-                    width: 25rem;
+                    // width: 25rem;
                     img{ 
                         
                         width: 100%;
@@ -1048,14 +1413,17 @@ header{
 
                 }
                 nav{  
+                    // width: fit-content;
                     display: flex;
                     // flex: 1 0 auto;
-                    flex-grow: 1; 
+                    flex-grow: 1;
+                    order: 2; 
                     justify-content: space-between;
                     justify-self: center;
                     overflow: hidden; 
-                    margin: 0 5%;
+                    margin: 1% 0;
                     div{
+                        margin: 1rem;
                         display: inline-flex;
                         align-self: stretch;
                         align-items: center;
@@ -1145,7 +1513,7 @@ header{
     .carousel-inner{
         .item{
 
-            height: 80vmax;
+            height: 60vmax;
             img{
                 position: relative;
                 z-index: -1;

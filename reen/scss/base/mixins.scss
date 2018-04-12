@@ -37,6 +37,21 @@
     display: flex;
 }
 
+@mixin header-text{
+    @include lato;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 8rem;
+}
+
+@mixin header-subtext{
+    @include sourcesans;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .075rem;
+    line-height: 3rem;
+}
+
 @mixin indicators{
     content:'';
     background-color: $textmaincol;
